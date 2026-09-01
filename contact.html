@@ -2,11 +2,227 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=index.html">
-<link rel="canonical" href="https://universalsolutions.in/">
-<title>Universal Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Universal Solutions</title>
+<meta name="description" content="Get in touch with Universal Solutions to discuss BPO and KPO support for your business.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep: #14213D;
+    --navy-midnight: #0B1626;
+    --teal: #1CA9A0;
+    --cyan-bright: #3FD3C6;
+    --bg: #F7F9FB;
+    --ink: #4A5568;
+    --border: #E2E8F0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--navy-deep);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+  }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(247,249,251,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(20,33,61,0.06);
+  }
+  header .container { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.02rem; }
+  .brand img { width: 40px; height: 40px; border-radius: 50%; }
+  nav { display: flex; gap: 28px; }
+  nav a { font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; }
+  nav a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--teal); transition: width 0.25s ease; }
+  nav a:hover::after, nav a.active::after { width: 100%; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer; border: none; }
+  .btn-outline { border: 1.5px solid var(--navy-deep); color: var(--navy-deep); background: transparent; }
+  .btn-primary { background: linear-gradient(120deg, var(--teal), var(--cyan-bright)); color: var(--navy-midnight); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(20,33,61,0.16); }
+  .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy-midnight), var(--navy-deep));
+    color: #fff;
+    padding: 90px 0 70px;
+  }
+  .eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cyan-bright); margin-bottom: 16px; }
+  h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.8rem); margin-bottom: 16px; }
+  .page-hero p { color: rgba(255,255,255,0.78); font-size: 1.05rem; max-width: 600px; }
+
+  main { padding: 70px 0 100px; }
+  .split { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; align-items: start; }
+
+  .form-card {
+    background: #fff; border-radius: 16px; padding: 40px;
+    box-shadow: 0 8px 30px rgba(20,33,61,0.08);
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .form-grid .full { grid-column: 1 / -1; }
+  label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--navy-deep); }
+  input, textarea, select {
+    width: 100%; padding: 12px 14px; border: 1.5px solid var(--border);
+    border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    background: #fff; color: var(--navy-deep);
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(28,169,160,0.15);
+  }
+  @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+  .info-card {
+    background: linear-gradient(135deg, var(--navy-deep), var(--navy-midnight));
+    color: #fff; border-radius: 16px; padding: 36px;
+  }
+  .info-card h3 { font-family: 'Fraunces', serif; margin-bottom: 14px; }
+  .info-card p { color: rgba(255,255,255,0.78); font-size: 0.92rem; margin-bottom: 22px; }
+  .info-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 0.92rem; }
+  .info-row svg { flex-shrink: 0; }
+
+  @media (max-width: 900px) { .split { grid-template-columns: 1fr; } }
+
+  #formStatus { margin-top: 16px; font-size: 0.9rem; font-weight: 500; }
+  #formStatus.success { color: var(--teal); }
+  #formStatus.error { color: #c0392b; }
+
+  footer { background: var(--navy-midnight); color: rgba(255,255,255,0.6); padding: 40px 0; font-size: 0.85rem; text-align: center; }
+  footer a { color: rgba(255,255,255,0.75); }
+</style>
 </head>
 <body>
-<p>This page has moved. <a href="index.html">Click here</a> if you are not redirected.</p>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="brand"><img src="images/logo.png" alt="Universal Solutions logo">Universal Solutions</a>
+    <nav>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why-us">Why Us</a>
+      <a href="index.html#leadership">Leadership</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a href="mailto:universalsolutionsagent@gmail.com" class="btn btn-outline">Email Us</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Let's talk about your operations.</h1>
+    <p>Tell us a bit about your business and what's slowing your team down. We'll get back to you within one business day.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+    <div class="split">
+      <div class="form-card">
+        <form id="contactForm" action="https://formspree.io/f/xdeogkav" method="POST">
+          <div class="form-grid">
+            <div>
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="full">
+              <label for="service">What are you interested in?</label>
+              <select id="service" name="service">
+                <option>Business Process Outsourcing</option>
+                <option>Knowledge Process Outsourcing</option>
+                <option>Customer Experience Management</option>
+                <option>Finance &amp; Accounting Support</option>
+                <option>Data &amp; Analytics Support</option>
+                <option>Not sure &mdash; help me decide</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="message">Tell us about your business needs</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+            </div>
+          </div>
+        </form>
+        <p id="formStatus"></p>
+      </div>
+
+      <div class="info-card">
+        <h3>Other ways to reach us</h3>
+        <p>Prefer email or LinkedIn? We're happy to connect however works best for you.</p>
+        <div class="info-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <a href="mailto:universalsolutionsagent@gmail.com" style="color:rgba(255,255,255,0.85);">universalsolutionsagent@gmail.com</a>
+        </div>
+        <div class="info-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://www.linkedin.com/in/universal-solutions-53662942b/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.85);">LinkedIn</a>
+        </div>
+        <div class="info-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>We typically reply within 1 business day</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <span>&copy; 2026 Universal Solutions. <a href="mailto:universalsolutionsagent@gmail.com">universalsolutionsagent@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('formStatus');
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = "Thanks! We've received your message and will be in touch within one business day.";
+        status.className = 'success';
+        form.reset();
+      } else {
+        status.textContent = "Something went wrong sending your message. Please try emailing us directly instead.";
+        status.className = 'error';
+      }
+    } catch (err) {
+      status.textContent = "Something went wrong sending your message. Please try emailing us directly instead.";
+      status.className = 'error';
+    }
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  });
+</script>
+
 </body>
 </html>
