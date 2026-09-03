@@ -59,14 +59,14 @@
 
   main { padding: 70px 0 100px; }
   .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
-  .post-card {
+  a.post-card {
+    display: flex; flex-direction: column;
     background: #fff; border-radius: 12px; padding: 28px 24px;
     box-shadow: 0 8px 26px rgba(20,33,61,0.07);
     border-top: 3px solid transparent;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    display: flex; flex-direction: column;
   }
-  .post-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(20,33,61,0.14); border-top-color: var(--teal); }
+  a.post-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(20,33,61,0.14); border-top-color: var(--teal); }
   .post-tag {
     display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
     text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
@@ -77,6 +77,8 @@
 
   @media (max-width: 980px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+
+  .empty-note { color: var(--ink); font-size: 0.95rem; text-align: center; padding: 40px 0; }
 
   footer { background: var(--navy-midnight); color: rgba(255,255,255,0.6); padding: 40px 0; font-size: 0.85rem; text-align: center; }
   footer a { color: rgba(255,255,255,0.75); }
@@ -92,8 +94,9 @@
       <a href="index.html#why-us">Why Us</a>
       <a href="index.html#leadership">Leadership</a>
       <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a href="mailto:universalsolutionsagent@gmail.com" class="btn btn-outline">Contact Us</a>
+    <a href="contact.html" class="btn btn-outline">Contact Us</a>
   </div>
 </header>
 
@@ -116,208 +119,12 @@
         <span class="read-more">Read article &rarr;</span>
       </a>
 
-            <a href="blog/bpo-vs-kpo.html" class="post-card">
+      <a href="blog/bpo-vs-kpo.html" class="post-card">
         <span class="post-tag">BPO vs KPO</span>
         <h3>BPO vs KPO: Key Differences and Which One Your Business Needs</h3>
         <p>A breakdown of how business process and knowledge process outsourcing differ, and how to decide which fits your operations.</p>
         <span class="read-more">Read article &rarr;</span>
       </a>
-
-            <a href="blog/signs-you-need-operations-support.html" class="post-card">
-        <span class="post-tag">Growth</span>
-        <h3>10 Signs Your Startup Needs an Operations Support Partner</h3>
-        <p>Common warning signs that internal operations are becoming a bottleneck to growth &mdash; and what to do about it.</p>
-        <span class="read-more">Read article &rarr;</span>
-      </a>
-
-            <a href="blog/back-office-outsourcing-for-product-companies.html" class="post-card">
-        <span class="post-tag">Scaling</span>
-        <h3>How Outsourcing Back-Office Work Helps Product Companies Scale Faster</h3>
-        <p>Why product-led companies benefit from offloading repetitive operational work to a dedicated partner team.</p>
-        <span class="read-more">Read article &rarr;</span>
-      </a>
-
-            <a href="blog/in-house-vs-outsourced-support-cost.html" class="post-card">
-        <span class="post-tag">Cost</span>
-        <h3>The True Cost of In-House vs Outsourced Customer Support</h3>
-        <p>Comparing the real costs &mdash; hiring, training, tooling, turnover &mdash; of building support in-house versus outsourcing it.</p>
-        <span class="read-more">Read article &rarr;</span>
-      </a>
-
-      <div class="post-card">
-        <span class="post-tag">Operations</span>
-        <h3>5 Operational Bottlenecks That Quietly Slow Down Growing Teams</h3>
-        <p>The subtle process gaps that drain time and focus from growing teams &mdash; and how to identify them early.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Partner Selection</span>
-        <h3>How to Choose the Right BPO Partner for Your Business</h3>
-        <p>A practical checklist for evaluating outsourcing partners on fit, flexibility, and long-term reliability.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">KPO</span>
-        <h3>Knowledge Process Outsourcing: Turning Data Into Business Decisions</h3>
-        <p>How KPO services help companies convert raw data and research into actionable business insight.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Coverage</span>
-        <h3>Why 24/7 Operational Coverage Matters for Global Product Companies</h3>
-        <p>The business case for round-the-clock operational support in a world of distributed, global customers.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Customer Experience</span>
-        <h3>Building a Scalable Customer Experience Team Without Hiring In-House</h3>
-        <p>How to design a support function that scales with demand without the overhead of full in-house hiring.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Finance</span>
-        <h3>Finance &amp; Accounting Outsourcing: What Can (and Shouldn't) Be Delegated</h3>
-        <p>A practical look at which financial operations are safe to outsource, and which should stay in-house.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Quality</span>
-        <h3>How Quality Assurance Frameworks Reduce Operational Risk</h3>
-        <p>Why structured QA processes matter in outsourced operations, and what a strong framework looks like.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Analytics</span>
-        <h3>Data Analytics Support: What KPO Providers Actually Do</h3>
-        <p>A closer look at the day-to-day analytical work KPO teams handle, from data cleaning to dashboarding.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Onboarding</span>
-        <h3>Onboarding a BPO Partner: A Step-by-Step Timeline</h3>
-        <p>What a typical onboarding process looks like when bringing on an operations outsourcing partner.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Security</span>
-        <h3>How to Maintain Data Security When Outsourcing Operations</h3>
-        <p>Best practices for protecting sensitive data and maintaining compliance when working with an outsourcing partner.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Coordination</span>
-        <h3>Project Coordination Outsourcing: Keeping Cross-Functional Teams Aligned</h3>
-        <p>How dedicated coordination support keeps deliverables and timelines on track across teams.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Myths</span>
-        <h3>Common Myths About BPO/KPO Services, Debunked</h3>
-        <p>Addressing common misconceptions about outsourcing &mdash; cost, quality, and control &mdash; with a clearer picture.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Startups</span>
-        <h3>How Startups Can Scale Support Operations Without Scaling Headcount</h3>
-        <p>Practical strategies for startups to grow operational capacity without a proportional rise in fixed costs.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Engagement Models</span>
-        <h3>Choosing Between a Dedicated Team vs Shared Pool Outsourcing Model</h3>
-        <p>Comparing dedicated and shared-pool outsourcing models, and which suits different company stages.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Trends</span>
-        <h3>The Future of Business Process Outsourcing: Trends to Watch</h3>
-        <p>Emerging trends shaping the BPO/KPO industry, from automation to evolving client expectations.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">SaaS</span>
-        <h3>Outsourcing for SaaS Companies: Managing Support Tickets Without Scaling Your Team</h3>
-        <p>How SaaS companies keep response times low and support quality high without growing headcount in-house.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">E-Commerce</span>
-        <h3>How E-Commerce Brands Use BPO to Handle Order Support During Peak Season</h3>
-        <p>Managing seasonal order spikes, returns, and customer queries through flexible outsourced support.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Fintech</span>
-        <h3>Fintech Back-Office Outsourcing: Balancing Speed, Accuracy, and Compliance</h3>
-        <p>What fintech companies typically outsource in back-office operations, and how compliance is maintained.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Healthcare</span>
-        <h3>Why Healthcare Companies Outsource Non-Clinical Administrative Work</h3>
-        <p>How outsourcing administrative and back-office tasks lets healthcare teams focus more on patient care.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Insurance</span>
-        <h3>Insurance Back-Office Outsourcing: Claims Processing and Policy Administration Explained</h3>
-        <p>A look at how insurance companies delegate claims and policy administration workflows to outsourcing partners.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">D2C</span>
-        <h3>How D2C Brands Scale Customer Support Through Outsourcing Partners</h3>
-        <p>Building a responsive, on-brand support experience for direct-to-consumer companies without overstaffing.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Real Estate</span>
-        <h3>Real Estate Back-Office Support: Outsourcing Listings, Documentation, and Client Coordination</h3>
-        <p>How real estate businesses offload listing management, paperwork, and client coordination to outsourced teams.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">EdTech</span>
-        <h3>EdTech Operations Outsourcing: Managing Enrollment, Support, and Data at Scale</h3>
-        <p>How education technology companies handle growing enrollment, student support, and data operations.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Logistics</span>
-        <h3>Logistics &amp; Supply Chain Companies: Where Outsourcing Fits Into Daily Operations</h3>
-        <p>Common logistics operations &mdash; tracking, coordination, documentation &mdash; that benefit from outsourced support.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
-
-      <div class="post-card">
-        <span class="post-tag">Legal</span>
-        <h3>Legal Process Outsourcing (LPO): What Law Firms and Legal Teams Actually Delegate</h3>
-        <p>An overview of legal process outsourcing &mdash; document review, research support, and administrative work firms commonly delegate.</p>
-        <span class="read-more">Coming soon &rarr;</span>
-      </div>
 
     </div>
   </div>
