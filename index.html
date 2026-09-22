@@ -118,5 +118,34 @@ footer{background:var(--navy-midnight);color:rgba(255,255,255,.6);padding:52px 0
 <script>
 document.addEventListener('DOMContentLoaded',()=>{const header=document.getElementById('siteHeader');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)});const els=document.querySelectorAll('.reveal');if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:.12});els.forEach(el=>io.observe(el))}else els.forEach(el=>el.classList.add('in-view'))});
 </script>
+  <!-- WhatsApp Chat Button -->
+<a
+  href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with Universal Solutions on WhatsApp"
+  style="
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 999px;
+    background: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  "
+>
+  <span style="font-size: 20px;">💬</span>
+  <span>Chat with us</span>
+</a>
 </body>
 </html>
