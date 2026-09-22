@@ -3,376 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Universal Solutions | Business &amp; Knowledge Process Solutions</title>
-<meta name="description" content="Universal Solutions is a business and knowledge process outsourcing partner helping product companies scale operations, analytics, and customer support with precision.">
+<title>Universal Solutions | The People Behind Your Operations</title>
+<meta name="description" content="Universal Solutions provides reliable business operations support across customer experience, finance, data, administration, and 24/7 operational coverage. Support starting from USD 6/hour.">
 <link rel="icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy-deep: #14213D;
-    --navy-midnight: #0B1626;
-    --teal: #1CA9A0;
-    --cyan-bright: #3FD3C6;
-    --bg: #F7F9FB;
-    --ink: #4A5568;
-    --border: #E2E8F0;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-  }
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--navy-deep);
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.65;
-  }
-  a { text-decoration: none; color: inherit; }
-  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-
-  header {
-    position: sticky; top: 0; z-index: 20;
-    background: rgba(247,249,251,0.9);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(20,33,61,0.06);
-    transition: box-shadow 0.3s ease;
-  }
-  header.scrolled { box-shadow: 0 4px 20px rgba(20,33,61,0.08); }
-  header .container {
-    display: flex; align-items: center; justify-content: space-between;
-    height: 74px;
-  }
-  .brand { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.02rem; }
-  .brand img { width: 40px; height: 40px; border-radius: 50%; }
-  nav { display: flex; gap: 30px; }
-  nav a { font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; }
-  nav a::after {
-    content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
-    background: var(--teal); transition: width 0.25s ease;
-  }
-  nav a:hover::after { width: 100%; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 26px; border-radius: 999px;
-    font-weight: 600; font-size: 0.92rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .btn-primary { background: linear-gradient(120deg, var(--teal), var(--cyan-bright)); color: var(--navy-midnight); }
-  .btn-outline { border: 1.5px solid var(--navy-deep); color: var(--navy-deep); }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(20,33,61,0.16); }
-
-  .hero {
-    position: relative;
-    min-height: 88vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: var(--navy-midnight);
-    color: #fff;
-  }
-  .hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(115deg, rgba(11,22,38,0.92) 10%, rgba(11,22,38,0.55) 55%, rgba(28,169,160,0.35) 100%);
-  }
-  .hero .container { position: relative; z-index: 1; padding: 40px 24px; }
-  .eyebrow {
-    display: inline-block; font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--cyan-bright);
-    margin-bottom: 18px;
-  }
-  h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2.2rem, 4.8vw, 3.4rem); line-height: 1.18; max-width: 760px; margin-bottom: 24px; }
-  .hero p.lead { color: rgba(255,255,255,0.78); font-size: 1.1rem; max-width: 620px; margin-bottom: 34px; }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-ghost { border: 1.5px solid rgba(255,255,255,0.45); color: #fff; }
-
-  .stats {
-    background: var(--navy-deep);
-    color: #fff;
-    padding: 42px 0;
-  }
-  .stats .container { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center; }
-  .stat-num { font-family: 'Fraunces', serif; font-size: 2rem; color: var(--cyan-bright); font-weight: 600; }
-  .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 4px; }
-
-  section { padding: 90px 0; }
-  h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin-bottom: 18px; }
-  .section-head { max-width: 640px; margin: 0 auto 52px; text-align: center; }
-  .section-head p { color: var(--ink); font-size: 1.05rem; }
-
-  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
-  .card {
-    background: #fff; border-radius: 12px; padding: 30px 24px;
-    box-shadow: 0 8px 26px rgba(20,33,61,0.07);
-    border-top: 3px solid transparent;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  }
-  .card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(20,33,61,0.14); border-top-color: var(--teal); }
-  .card .icon {
-    width: 46px; height: 46px; border-radius: 12px;
-    background: linear-gradient(135deg, var(--navy-deep), var(--teal));
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 16px;
-    transition: transform 0.25s ease;
-  }
-  .card:hover .icon { transform: scale(1.08) rotate(-4deg); }
-  .card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 8px; }
-  .card p { color: var(--ink); font-size: 0.93rem; }
-
-  @media (max-width: 980px) { .grid-4 { grid-template-columns: repeat(2,1fr); } .stats .container { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 600px) { .grid-4 { grid-template-columns: 1fr; } }
-
-  .why { background: #fff; }
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .split ul { list-style: none; margin-top: 20px; }
-  .split li { position: relative; padding-left: 26px; margin-bottom: 14px; color: var(--ink); }
-  .split li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
-  .why-card {
-    background: linear-gradient(135deg, var(--navy-deep), var(--navy-midnight));
-    color: #fff; border-radius: 16px; padding: 40px;
-    transition: transform 0.3s ease;
-  }
-  .why-card:hover { transform: translateY(-4px); }
-  .why-card h3 { font-family: 'Fraunces', serif; margin-bottom: 14px; }
-  .why-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
-  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
-
-  .leader-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-  .leader-card { background: #fff; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 8px 26px rgba(20,33,61,0.07); transition: transform 0.25s ease; }
-  .leader-card:hover { transform: translateY(-6px); }
-  .avatar {
-    width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 18px;
-    background: linear-gradient(135deg, var(--teal), var(--navy-deep));
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
-  }
-  .leader-card h4 { font-size: 1.02rem; margin-bottom: 4px; }
-  .leader-card span.role { font-size: 0.82rem; color: var(--teal); font-weight: 600; display: block; margin-bottom: 12px; }
-  .leader-card p { font-size: 0.88rem; color: var(--ink); }
-  @media (max-width: 860px) { .leader-grid { grid-template-columns: 1fr; } }
-
-  .cta-band {
-    background: linear-gradient(120deg, var(--navy-deep), var(--navy-midnight));
-    color: #fff; text-align: center; border-radius: 20px; padding: 64px 40px;
-    position: relative; overflow: hidden;
-  }
-  .cta-band h2 { color: #fff; }
-  .cta-band p { color: rgba(255,255,255,0.75); max-width: 520px; margin: 14px auto 30px; }
-
-  footer { background: var(--navy-midnight); color: rgba(255,255,255,0.6); padding: 40px 0; font-size: 0.85rem; text-align: center; }
-
-  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.in-view { opacity: 1; transform: translateY(0); }
-  .reveal-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal-scale.in-view { opacity: 1; transform: scale(1); }
+:root{--navy-deep:#14213D;--navy-midnight:#0B1626;--teal:#1CA9A0;--cyan-bright:#3FD3C6;--bg:#F7F9FB;--ink:#4A5568;--border:#E2E8F0;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--navy-deep);-webkit-font-smoothing:antialiased;line-height:1.65}a{text-decoration:none;color:inherit}.container{max-width:1160px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:30;background:rgba(247,249,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(20,33,61,.06);transition:box-shadow .3s ease}header.scrolled{box-shadow:0 5px 24px rgba(20,33,61,.09)}header .container{display:flex;align-items:center;justify-content:space-between;height:74px}.brand{display:flex;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:600;font-size:1.02rem}.brand img{width:40px;height:40px;border-radius:50%}nav{display:flex;gap:28px}nav a{font-size:.92rem;font-weight:500;position:relative;padding:4px 0}nav a:after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--teal);transition:width .25s ease}nav a:hover:after{width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 25px;border-radius:999px;font-weight:600;font-size:.92rem;transition:transform .2s ease,box-shadow .2s ease}.btn-primary{background:linear-gradient(120deg,var(--teal),var(--cyan-bright));color:var(--navy-midnight)}.btn-outline{border:1.5px solid var(--navy-deep);color:var(--navy-deep)}.btn-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,33,61,.16)}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--navy-midnight);color:#fff}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.48}.hero-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(11,22,38,.94) 8%,rgba(11,22,38,.66) 54%,rgba(28,169,160,.3) 100%)}.hero .container{position:relative;z-index:1;padding:76px 24px}.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.76rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--cyan-bright);margin-bottom:20px}.eyebrow:before{content:'';width:28px;height:1px;background:var(--cyan-bright)}h1{font-family:Fraunces,serif;font-weight:600;font-size:clamp(2.5rem,5.2vw,4.45rem);line-height:1.08;max-width:850px;margin-bottom:25px;letter-spacing:-.02em}.hero p.lead{color:rgba(255,255,255,.8);font-size:1.08rem;max-width:680px;margin-bottom:32px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.price-note{display:inline-flex;margin-top:26px;padding:8px 14px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.07);font-size:.84rem;color:rgba(255,255,255,.82)}
+.trust-strip{background:var(--navy-deep);color:#fff;padding:30px 0}.trust-strip .container{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.trust-item{padding:0 18px;border-left:1px solid rgba(255,255,255,.14)}.trust-item:first-child{border-left:0}.trust-item strong{display:block;font-family:Fraunces,serif;font-size:1.2rem;color:var(--cyan-bright);margin-bottom:2px}.trust-item span{font-size:.82rem;color:rgba(255,255,255,.65)}
+section{padding:92px 0}h2{font-family:Fraunces,serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;margin-bottom:16px}.section-head{max-width:690px;margin:0 auto 48px;text-align:center}.section-head p{color:var(--ink);font-size:1.02rem}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;border-radius:14px;padding:28px 23px;box-shadow:0 8px 26px rgba(20,33,61,.07);border-top:3px solid transparent;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(20,33,61,.14);border-top-color:var(--teal)}.card .icon{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--navy-deep),var(--teal));display:flex;align-items:center;justify-content:center;margin-bottom:16px}.card h3{font-family:Fraunces,serif;font-size:1.08rem;margin-bottom:8px}.card p{color:var(--ink);font-size:.9rem}
+.soft{background:#fff}.split{display:grid;grid-template-columns:1.02fr .98fr;gap:68px;align-items:center}.split .intro{color:var(--ink);font-size:1rem;max-width:610px}.check-list{list-style:none;margin-top:24px}.check-list li{position:relative;padding-left:30px;margin-bottom:15px;color:var(--ink)}.check-list li:before{content:'✓';position:absolute;left:0;top:0;color:var(--teal);font-weight:700}.feature-card{background:linear-gradient(135deg,var(--navy-deep),var(--navy-midnight));color:#fff;border-radius:20px;padding:42px;box-shadow:0 18px 42px rgba(20,33,61,.15)}.feature-card .mini{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-bright);font-weight:700;margin-bottom:13px}.feature-card h3{font-family:Fraunces,serif;font-size:1.7rem;line-height:1.18;margin-bottom:14px}.feature-card p{color:rgba(255,255,255,.76);font-size:.94rem;margin-bottom:24px}.feature-points{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-bottom:26px}.feature-points span{font-size:.84rem;color:rgba(255,255,255,.82)}
+.industries{background:var(--bg)}.industry-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.industry{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px 16px;text-align:center;font-weight:600;font-size:.88rem;min-height:94px;display:flex;align-items:center;justify-content:center;transition:transform .2s ease,border-color .2s ease}.industry:hover{transform:translateY(-3px);border-color:var(--teal)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{position:relative;padding:26px 20px;background:#fff;border:1px solid var(--border);border-radius:14px}.step-number{font-family:Fraunces,serif;color:var(--teal);font-size:1.55rem;margin-bottom:14px}.step h3{font-family:Fraunces,serif;font-size:1.05rem;margin-bottom:7px}.step p{font-size:.88rem;color:var(--ink)}
+.models{background:#fff}.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.model{border:1px solid var(--border);border-radius:15px;padding:30px;background:var(--bg)}.model h3{font-family:Fraunces,serif;font-size:1.18rem;margin-bottom:9px}.model p{color:var(--ink);font-size:.9rem}.model strong{display:block;margin-top:16px;color:var(--navy-deep);font-size:.84rem}
+.faq{max-width:850px;margin:0 auto}.faq details{background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:12px;padding:0 20px}.faq summary{cursor:pointer;list-style:none;padding:20px 4px;font-weight:600}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:'+';float:right;color:var(--teal);font-size:1.2rem}.faq details[open] summary:after{content:'−'}.faq p{color:var(--ink);font-size:.9rem;padding:0 4px 20px}
+.cta-wrap{padding-top:35px}.cta-band{background:linear-gradient(120deg,var(--navy-deep),var(--navy-midnight));color:#fff;text-align:center;border-radius:22px;padding:68px 40px;position:relative;overflow:hidden}.cta-band:after{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(63,211,198,.1);right:-80px;top:-100px}.cta-band h2{color:#fff;position:relative;z-index:1}.cta-band p{color:rgba(255,255,255,.75);max-width:570px;margin:13px auto 28px;position:relative;z-index:1}.cta-band .btn{position:relative;z-index:1}
+footer{background:var(--navy-midnight);color:rgba(255,255,255,.6);padding:52px 0 30px;font-size:.84rem}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:35px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.1)}.footer-brand{font-family:Fraunces,serif;color:#fff;font-size:1.1rem;margin-bottom:10px}.footer-grid p{max-width:300px;line-height:1.7}.footer-title{color:#fff;font-weight:600;margin-bottom:13px}.footer-links{display:flex;flex-direction:column;gap:8px}.footer-links a:hover{color:var(--cyan-bright)}.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px}.social{display:flex;align-items:center;gap:10px}.social a{display:flex;align-items:center;justify-content:center;width:35px;height:35px;border-radius:50%;border:1px solid rgba(255,255,255,.2)}.social a:hover{background:rgba(255,255,255,.08)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
+@media(max-width:980px){nav{gap:18px}.grid-4{grid-template-columns:repeat(2,1fr)}.industry-grid{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.trust-strip .container{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(3){border-left:0}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){header .container{height:68px}.brand span{display:none}nav{display:none}.hero{min-height:82vh}.hero .container{padding:65px 24px}h1{font-size:clamp(2.35rem,11vw,3.5rem)}.split{grid-template-columns:1fr;gap:38px}.model-grid{grid-template-columns:1fr}.industry-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;align-items:flex-start}.trust-strip .container{grid-template-columns:1fr 1fr}.trust-item:nth-child(3){border-left:1px solid rgba(255,255,255,.14)}}
+@media(max-width:560px){.grid-4,.steps{grid-template-columns:1fr}.trust-strip .container{grid-template-columns:1fr}.trust-item{border-left:0!important;border-top:1px solid rgba(255,255,255,.14);padding:14px 0 0}.trust-item:first-child{border-top:0;padding-top:0}.feature-points{grid-template-columns:1fr}.industry-grid{grid-template-columns:1fr 1fr}.hero-actions .btn{width:100%}.hero-actions{width:100%}.cta-band{padding:52px 24px}}
 </style>
 </head>
 <body>
-
 <header id="siteHeader">
   <div class="container">
-    <div class="brand"><img src="images/logo.png" alt="Universal Solutions logo">Universal Solutions</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#leadership">Leadership</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="Universal Solutions logo"><span>Universal Solutions</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#services">Services</a><a href="#why-us">Why Us</a><a href="#industries">Industries</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
     </nav>
-    <div style="display:flex; align-items:center; gap:14px;">
-      <a href="https://www.linkedin.com/in/universal-solutions-53662942b/" target="_blank" rel="noopener" aria-label="Universal Solutions on LinkedIn" style="display:flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:1.5px solid var(--navy-deep); transition: background 0.2s ease, transform 0.2s ease;" onmouseover="this.style.background='var(--navy-deep)'; this.style.transform='translateY(-2px)'; this.querySelector('svg').style.stroke='#fff'" onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.querySelector('svg').style.stroke='#14213D'">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2" style="transition:stroke 0.2s ease;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="contact.html" class="btn btn-outline">Get a Quote</a>
     </div>
   </div>
 </header>
 
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="images/7581202-hd_1920_1080_30fps.mp4" type="video/mp4">
-  </video>
+  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true"><source src="images/7581202-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
   <div class="hero-overlay"></div>
   <div class="container">
-    <span class="eyebrow">Business &amp; Knowledge Process Solutions</span>
-    <h1>The operations partner behind product companies that scale.</h1>
-    <p class="lead">Universal Solutions is a business and knowledge process outsourcing (BPO/KPO) firm built for product-driven companies. We take on the operational, analytical, and support-heavy work that slows growing teams down &mdash; so your core team can stay focused on building the product.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn btn-primary">Talk to Our Team</a>
-      <a href="#services" class="btn btn-ghost">Explore What We Do</a>
-    </div>
+    <span class="eyebrow">Business Operations Support</span>
+    <h1>The people behind your operations.</h1>
+    <p class="lead">Universal Solutions provides reliable operational support for companies that need capable people behind the scenes — without the cost and complexity of building every function in-house.</p>
+    <div class="hero-actions"><a href="contact.html" class="btn btn-primary">Get a Quote</a><a href="#services" class="btn btn-ghost">Explore Services</a></div>
+    <div class="price-note">Support starting from <strong style="margin-left:5px">USD 6/hour</strong></div>
   </div>
 </section>
 
-<section class="stats">
+<section class="trust-strip" aria-label="Key capabilities">
   <div class="container">
-    <div class="reveal-scale"><div class="stat-num">BPO</div><div class="stat-label">Business Process Outsourcing</div></div>
-    <div class="reveal-scale"><div class="stat-num">KPO</div><div class="stat-label">Knowledge Process Outsourcing</div></div>
-    <div class="reveal-scale"><div class="stat-num">24/7</div><div class="stat-label">Operational Coverage</div></div>
-    <div class="reveal-scale"><div class="stat-num">100%</div><div class="stat-label">Client-Dedicated Teams</div></div>
+    <div class="trust-item"><strong>Flexible</strong><span>Start with one function and scale as needed</span></div>
+    <div class="trust-item"><strong>Dedicated</strong><span>Support built around your workflows</span></div>
+    <div class="trust-item"><strong>24/7</strong><span>Extended and after-hours operational coverage</span></div>
+    <div class="trust-item"><strong>USD 6/hr</strong><span>Starting support rate for eligible services</span></div>
   </div>
 </section>
 
 <section id="services">
   <div class="container">
-    <div class="section-head reveal">
-      <h2>What We Do</h2>
-      <p>A broad bench of operational and analytical services, built to plug directly into how product companies work.</p>
-    </div>
+    <div class="section-head reveal"><h2>Support for the work that keeps business moving.</h2><p>Practical operational support across customer experience, finance, data, administration, and specialized workflows.</p></div>
     <div class="grid-4">
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <h3>Business Process Outsourcing</h3>
-        <p>End-to-end management of recurring operational workflows &mdash; order processing, data entry, back-office administration, and more.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8.7L14 13.4l-3-3L4.3 17.4"/></svg></div>
-        <h3>Knowledge Process Outsourcing</h3>
-        <p>Research, data analysis, and domain-specific analytical support delivered by trained knowledge professionals.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>Customer Experience Management</h3>
-        <p>Support desks, ticket resolution, and customer communication handled with consistency and care.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-        <h3>Finance &amp; Accounting Support</h3>
-        <p>Invoicing, reconciliation, reporting, and routine financial operations handled accurately and on schedule.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
-        <h3>Data &amp; Analytics Support</h3>
-        <p>Data cleaning, dashboarding, and reporting pipelines that turn raw data into decisions.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M8 2v4M16 2v4M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg></div>
-        <h3>Project &amp; Program Coordination</h3>
-        <p>Coordinators who track deliverables, manage timelines, and keep cross-functional work moving.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
-        <h3>Round-the-Clock Coverage</h3>
-        <p>Extended and after-hours support so operational continuity never depends on a single time zone.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
-        <h3>Quality Assurance &amp; Compliance</h3>
-        <p>Structured QA processes and compliance checks built into every workflow we run.</p>
-      </div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Customer Support</h3><p>Support desks, ticket handling, customer communication, and day-to-day service coordination.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><h3>Finance &amp; Accounting</h3><p>Invoicing, reconciliation, reporting, billing workflows, and routine financial administration.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8.7L14 13.4l-3-3L4.3 17.4"/></svg></div><h3>Data &amp; Reporting</h3><p>Data preparation, reporting, dashboards, quality checks, and recurring analytical support.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M8 2v4M16 2v4M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg></div><h3>Administrative Support</h3><p>Back-office administration, documentation, coordination, scheduling, and recurring operational tasks.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>After-Hours Coverage</h3><p>Extended and overnight support for businesses that need operational continuity beyond standard hours.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div><h3>Quality &amp; Process</h3><p>Structured workflows, quality checks, documentation, and process support built into delivery.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 18V6M4 6l6 6 6-6 4 4"/></svg></div><h3>Project Coordination</h3><p>Tracking, follow-ups, documentation, timelines, and coordination that keep work progressing.</p></div>
+      <div class="card reveal"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg></div><h3>Specialized Support</h3><p>Build a support function around the specific operational requirements of your business.</p></div>
     </div>
   </div>
 </section>
 
-<section class="why" id="why-us">
+<section class="soft" id="why-us">
   <div class="container">
     <div class="split">
-      <div class="reveal">
-        <h2>Built for product companies, not generic outsourcing.</h2>
-        <p style="color:var(--ink);">Most BPO/KPO providers are built for scale, not fit. We do the opposite &mdash; every engagement starts with understanding how your product and teams actually work, then we build a dedicated operational layer around that.</p>
-        <ul>
-          <li>Dedicated teams, not shared call-center pools</li>
-          <li>Leadership with direct operations and delivery experience</li>
-          <li>Flexible engagement &mdash; start with one function, scale as you grow</li>
-          <li>Process documentation and quality checks built in from day one</li>
-        </ul>
-      </div>
-      <div class="why-card reveal">
-        <h3>Why companies choose us</h3>
-        <p>We combine the structure of a traditional BPO/KPO with the responsiveness product teams expect &mdash; fast onboarding, clear reporting, and leadership that stays involved well past the kickoff call.</p>
-      </div>
+      <div class="reveal"><span class="eyebrow" style="color:var(--teal)">Why Universal Solutions</span><h2>A support partner that fits the way you work.</h2><p class="intro">You do not need another layer of complexity. You need dependable people, clear processes, and support that can adapt as your workload changes.</p><ul class="check-list"><li>Dedicated support aligned to your workflows</li><li>Flexible coverage — start small and expand when needed</li><li>Clear processes, documentation, and quality checks</li><li>Operational support designed around continuity and responsiveness</li></ul></div>
+      <div class="feature-card reveal"><span class="mini">A practical starting point</span><h3>Start with one desk. Build from there.</h3><p>Whether you need reservations, dispatch, accounting, customer support, administration, or after-hours coverage, we can structure support around the function that is creating the most pressure for your team.</p><div class="feature-points"><span>✓ Flexible staffing</span><span>✓ Recurring workflows</span><span>✓ Extended coverage</span><span>✓ Scalable support</span></div><a href="contact.html" class="btn btn-primary">Discuss Your Needs</a></div>
     </div>
   </div>
 </section>
 
-<section id="leadership">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>Leadership</h2>
-      <p>An experienced group of operations and delivery leaders guiding every engagement.</p>
-    </div>
-    <div class="leader-grid">
-      <div class="leader-card reveal">
-        <div class="avatar">OP</div>
-        <h4>Operations Leadership</h4>
-        <span class="role">Service Delivery</span>
-        <p>Years of experience running large-scale operational teams across BPO and KPO engagements, focused on consistency and measurable outcomes.</p>
-      </div>
-      <div class="leader-card reveal">
-        <div class="avatar">CX</div>
-        <h4>Client Experience Leadership</h4>
-        <span class="role">Client Success</span>
-        <p>Dedicated to keeping every client relationship transparent, responsive, and aligned to evolving business needs.</p>
-      </div>
-      <div class="leader-card reveal">
-        <div class="avatar">QA</div>
-        <h4>Quality &amp; Process Leadership</h4>
-        <span class="role">Quality Assurance</span>
-        <p>Builds the process discipline and QA frameworks that keep every workflow accurate, auditable, and scalable.</p>
-      </div>
-    </div>
-  </div>
+<section class="industries" id="industries">
+  <div class="container"><div class="section-head reveal"><h2>Industries we support</h2><p>Operational needs differ by industry. Our approach is to learn the workflow, then build support around it.</p></div><div class="industry-grid"><div class="industry reveal">Luxury Ground Transportation</div><div class="industry reveal">Travel &amp; Hospitality</div><div class="industry reveal">E-commerce</div><div class="industry reveal">Professional Services</div><div class="industry reveal">Growing Businesses</div></div></div>
 </section>
 
 <section>
-  <div class="container">
-    <div class="cta-band reveal">
-      <h2>Let&rsquo;s take operational work off your plate.</h2>
-      <p>Tell us what&rsquo;s slowing your team down, and we&rsquo;ll show you where we can help.</p>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
-    </div>
-  </div>
+  <div class="container"><div class="split"><div class="reveal"><span class="eyebrow" style="color:var(--teal)">Featured Service</span><h2>Specialized support for luxury ground transportation.</h2><p class="intro">Reservations, dispatch, accounting, and overnight coverage for limousine, chauffeur, airport transfer, and corporate transportation operators.</p><p class="intro" style="margin-top:14px">Give your operations team dependable backend coverage while your chauffeurs and clients stay focused on the trip.</p><a href="services/luxury-transportation-support.html" class="btn btn-outline" style="margin-top:24px">Explore Transportation Support</a></div><div class="feature-card reveal"><span class="mini">Luxury Transportation</span><h3>Reservations. Dispatch. Accounting. Overnight coverage.</h3><p>Start with a single operational desk and scale as your fleet and trip volume grow.</p><div class="feature-points"><span>✓ Reservations</span><span>✓ Dispatch</span><span>✓ Accounting</span><span>✓ 24/7 coverage</span></div></div></div></div>
 </section>
 
+<section class="models">
+  <div class="container"><div class="section-head reveal"><h2>Choose the level of support you need.</h2><p>There is no need to build a large operation before you know what works. Start with a focused function and expand as your requirements grow.</p></div><div class="model-grid"><div class="model reveal"><h3>Single Function</h3><p>Bring in support for one recurring workflow or operational desk.</p><strong>Example: reservations, billing, customer support</strong></div><div class="model reveal"><h3>Dedicated Team</h3><p>Create a consistent support function around a larger set of workflows.</p><strong>Example: customer operations or back-office support</strong></div><div class="model reveal"><h3>Extended Coverage</h3><p>Add evening, overnight, weekend, or other extended operational coverage.</p><strong>Example: 24/7 operations or after-hours dispatch</strong></div></div></div>
+</section>
+
+<section>
+  <div class="container"><div class="section-head reveal"><h2>How it works</h2><p>A straightforward process designed to get useful support in place without unnecessary complexity.</p></div><div class="steps"><div class="step reveal"><div class="step-number">01</div><h3>Tell us what you need</h3><p>Share the tasks, coverage, tools, and hours that matter to your business.</p></div><div class="step reveal"><div class="step-number">02</div><h3>Define the workflow</h3><p>We map the function, responsibilities, communication, and reporting expectations.</p></div><div class="step reveal"><div class="step-number">03</div><h3>Launch support</h3><p>Your support function gets introduced into the workflow with clear ownership.</p></div><div class="step reveal"><div class="step-number">04</div><h3>Scale when ready</h3><p>Add people, functions, or coverage as your operational needs change.</p></div></div></div>
+</section>
+
+<section class="soft">
+  <div class="container"><div class="section-head reveal"><h2>Frequently asked questions</h2></div><div class="faq"><details class="reveal"><summary>What does Universal Solutions support?</summary><p>We provide operational support across customer experience, finance and accounting, data and reporting, administration, project coordination, after-hours coverage, and specialized workflows.</p></details><details class="reveal"><summary>Can I start with just one function?</summary><p>Yes. The site is designed around a flexible model where a business can begin with one recurring function and expand the scope of support as requirements grow.</p></details><details class="reveal"><summary>Do you provide after-hours or 24/7 support?</summary><p>Extended and after-hours operational coverage is available for suitable workflows, including specialized transportation operations.</p></details><details class="reveal"><summary>How does the USD 6/hour starting rate work?</summary><p>USD 6/hour is a starting rate for eligible support arrangements. The final rate depends on the function, coverage, requirements, and engagement structure.</p></details></div></div>
+</section>
+
+<section class="cta-wrap"><div class="container"><div class="cta-band reveal"><h2>Ready to take operational work off your plate?</h2><p>Tell us what your team is spending too much time on. We will help you identify a practical support model.</p><a href="contact.html" class="btn btn-primary">Get a Quote</a></div></div></section>
+
 <footer>
-  <div style="display:flex; flex-direction:column; align-items:center; gap:14px;">
-    <div style="display:flex; align-items:center; gap:18px;">
-      <a href="https://www.linkedin.com/in/universal-solutions-53662942b/" target="_blank" rel="noopener" aria-label="Universal Solutions on LinkedIn" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; border:1.5px solid rgba(255,255,255,0.25); transition: background 0.2s ease, transform 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="mailto:universalsolutionsagent@gmail.com" style="font-size:0.85rem; color:rgba(255,255,255,0.75);">universalsolutionsagent@gmail.com</a>
-    </div>
-    <span>&copy; 2026 Universal Solutions. All rights reserved.</span>
-  </div>
+  <div class="container"><div class="footer-grid"><div><div class="footer-brand">Universal Solutions</div><p>Business operations support for companies that need dependable people behind the scenes.</p></div><div><div class="footer-title">Company</div><div class="footer-links"><a href="about.html">About</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></div><div><div class="footer-title">Services</div><div class="footer-links"><a href="#services">Operations Support</a><a href="services/luxury-transportation-support.html">Luxury Transportation</a><a href="services/index.html">All Services</a></div></div><div><div class="footer-title">Contact</div><div class="footer-links"><a href="mailto:universalsolutionsagent@gmail.com">universalsolutionsagent@gmail.com</a><a href="contact.html">Request a Quote</a></div></div></div><div class="footer-bottom"><span>&copy; 2026 Universal Solutions. All rights reserved.</span><div class="social"><a href="https://www.linkedin.com/in/universal-solutions-53662942b/" target="_blank" rel="noopener" aria-label="Universal Solutions on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.75)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div></div></div>
 </footer>
-
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('siteHeader');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
-    });
-
-    const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      revealEls.forEach(el => io.observe(el));
-    } else {
-      revealEls.forEach(el => el.classList.add('in-view'));
-    }
-  });
+document.addEventListener('DOMContentLoaded',()=>{const header=document.getElementById('siteHeader');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)});const els=document.querySelectorAll('.reveal');if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:.12});els.forEach(el=>io.observe(el))}else els.forEach(el=>el.classList.add('in-view'))});
 </script>
-
 </body>
 </html>
