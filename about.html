@@ -1,12 +1,139 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=index.html">
-<link rel="canonical" href="https://universalsolutions.in/">
-<title>Universal Solutions</title>
-</head>
-<body>
-<p>This page has moved. <a href="index.html">Click here</a> if you are not redirected.</p>
-</body>
-</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Universal Solutions</title>
+
+<meta
+  name="description"
+  content="Learn about Universal Solutions and our approach to reliable business operations support for growing companies."
+>
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+:root {
+  --navy-deep: #14213D;
+  --navy-midnight: #0B1626;
+  --teal: #1CA9A0;
+  --cyan-bright: #3FD3C6;
+  --bg: #F7F9FB;
+  --ink: #4A5568;
+  --border: #E2E8F0;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--navy-deep);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(247,249,251,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(20,33,61,0.06);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  white-space: nowrap;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  position: relative;
+  padding: 4px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--teal);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 28
