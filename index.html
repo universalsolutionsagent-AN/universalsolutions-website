@@ -2234,6 +2234,254 @@ window.addEventListener('scroll', function () {
 </script>
 
 
+<!-- =========================
+     PREMIUM WELCOME SCREEN
+========================= -->
+
+<div id="welcomeScreen" aria-label="Welcome to Universal Solutions">
+
+  <div class="welcome-inner">
+
+    <img
+      src="images/logo.png"
+      alt="Universal Solutions"
+      class="welcome-logo"
+    >
+
+    <div class="welcome-eyebrow">
+      WELCOME TO
+    </div>
+
+    <h2>
+      Universal Solutions
+    </h2>
+
+    <p>
+      The people behind your operations.
+    </p>
+
+    <div class="welcome-line">
+      <span></span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<style>
+
+/* =========================
+   PREMIUM WELCOME SCREEN
+========================= */
+
+#welcomeScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(28,169,160,0.12),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #0B1626,
+      #14213D
+    );
+
+  color: #fff;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
+}
+
+
+#welcomeScreen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.welcome-inner {
+  width: min(90%, 560px);
+  text-align: center;
+
+  transform: translateY(0);
+
+  animation:
+    welcomeContentIn 1s ease forwards;
+}
+
+
+.welcome-logo {
+  width: 72px;
+  height: 72px;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  margin-bottom: 24px;
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.12),
+    0 14px 40px rgba(0,0,0,0.28);
+}
+
+
+.welcome-eyebrow {
+  margin-bottom: 12px;
+
+  color: #3FD3C6;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+}
+
+
+.welcome-inner h2 {
+  margin: 0 0 12px;
+
+  color: #fff;
+
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+
+.welcome-inner p {
+  margin: 0;
+
+  color: rgba(255,255,255,0.68);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+
+.welcome-line {
+  width: 150px;
+  height: 2px;
+
+  margin: 30px auto 0;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.12);
+}
+
+
+.welcome-line span {
+  display: block;
+
+  width: 0;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #1CA9A0,
+    #3FD3C6
+  );
+
+  animation:
+    welcomeProgress 2.3s ease forwards;
+}
+
+
+@keyframes welcomeContentIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes welcomeProgress {
+
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .welcome-logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-inner h2 {
+    font-size: 2.2rem;
+  }
+
+  .welcome-inner p {
+    font-size: 0.88rem;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+/* =========================
+   WELCOME SCREEN BEHAVIOUR
+========================= */
+
+(function () {
+
+  const welcomeScreen =
+    document.getElementById('welcomeScreen');
+
+  if (!welcomeScreen) {
+    return;
+  }
+
+  setTimeout(function () {
+
+    welcomeScreen.classList.add('hide');
+
+  }, 2600);
+
+})();
+
+</script>
+
+
 </body>
 
 </html>
