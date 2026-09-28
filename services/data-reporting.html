@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data & Reporting Support | Universal Solutions</title>
+
+<meta
+  name="description"
+  content="Reliable data entry, research, spreadsheet management, reporting and business information support from Universal Solutions."
+>
+
+<link rel="icon" href="../images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+:root {
+  --navy-deep:#14213D;
+  --navy-midnight:#0B1626;
+  --teal:#1CA9A0;
+  --cyan:#3FD3C6;
+  --bg:#F7F9FB;
+  --ink:#4A5568;
+  --border:#E2E8F0;
+  --white:#fff;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--navy-deep);
+  line-height:1.7;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.container {
+  max-width:1140px;
+  margin:auto;
+  padding:0 24px;
+}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(247,249,251,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(20,33,61,.07);
+}
+
+header .container {
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Fraunces',serif;
+  font-weight:600;
+}
+
+.brand img {
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+nav {
+  display:flex;
+  gap:26px;
+}
+
+nav a {
+  font-size:.92rem;
+  font-weight:500;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 27px;
+  border-radius:999px;
+  font-weight:600;
+  transition:.2s ease;
+}
+
+.btn:hover {
+  transform:translateY(-2px);
+}
+
+.btn-primary {
+  background:linear-gradient(120deg,var(--teal),var(--cyan));
+  color:var(--navy-midnight);
+}
+
+.btn-outline {
+  border:1px solid var(--navy-deep);
+}
+
+.hero {
+  padding:105px 0 90px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(63,211,198,.15),transparent 30%),
+    linear-gradient(135deg,var(--navy-midnight),var(--navy-deep));
+}
+
+.eyebrow {
+  display:inline-block;
+  margin-bottom:18px;
+  color:var(--cyan);
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.hero h1 {
+  max-width:800px;
+  margin-bottom:22px;
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.7rem,6vw,4.5rem);
+  line-height:1.05;
+}
+
+.hero p {
+  max-width:720px;
+  color:rgba(255,255,255,.76);
+  font-size:1.05rem;
+}
+
+.hero-actions {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.btn-ghost {
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+}
+
+section {
+  padding:85px 0;
+}
+
+.section-heading {
+  max-width:760px;
+  margin-bottom:40px;
+}
+
+.section-heading h2 {
+  margin-bottom:14px;
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,4vw,2.8rem);
+  line-height:1.15;
+}
+
+.section-heading p {
+  color:var(--ink);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card {
+  padding:30px 25px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:#fff;
+}
+
+.card h3 {
+  margin-bottom:10px;
+  font-family:'Fraunces',serif;
+  font-size:1.3rem;
+}
+
+.card p {
+  color:var(--ink);
+  font-size:.9rem;
+}
+
+.icon {
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+  border-radius:12px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--navy-deep),var(--teal));
+}
+
+.dark {
+  color:#fff;
+  background:var(--navy-midnight);
+}
+
+.dark .section-heading p {
+  color:rgba(255,255,255,.7);
+}
+
+.list {
+  display:grid;
+  gap:14px;
+  margin-top:25px;
+  list-style:none;
+}
+
+.list li {
+  padding:15px 18px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.82);
+}
+
+.list li::before {
+  content:"✓";
+  margin-right:10px;
+  color:var(--cyan);
+  font-weight:700;
+}
+
+.cta {
+  margin-top:30px;
+  padding:60px 35px;
+  border-radius:20px;
+  text-align:center;
+  color:#fff;
+  background:linear-gradient(135deg,var(--navy-midnight),var(--navy-deep));
+}
+
+.cta h2 {
+  margin-bottom:12px;
+  font-family:'Fraunces',serif;
+  font-size:2.4rem;
+}
+
+.cta p {
+  max-width:650px;
+  margin:0 auto 25px;
+  color:rgba(255,255,255,.72);
+}
+
+footer {
+  padding:42px 0;
+  background:var(--navy-midnight);
+  color:rgba(255,255,255,.6);
+  text-align:center;
+  font-size:.84rem;
+}
+
+footer a {
+  color:var(--cyan);
+}
+
+@media(max-width:850px) {
+  nav {
+    display:none;
+  }
+
+  .grid {
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:560px) {
+
+  .container {
+    padding:0 18px;
+  }
+
+  .grid {
+    grid-template-columns:1fr;
+  }
+
+  .hero {
+    padding:75px 0;
+  }
+
+  .hero h1 {
+    font-size:2.65rem;
+  }
+
+  .hero-actions {
+    flex-direction:column;
+  }
+
+  .hero-actions .btn {
+    width:100%;
+  }
+
+  .cta {
+    padding:45px 22px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="container">
+
+    <a href="../index.html" class="brand">
+      <img src="../images/logo.png" alt="Universal Solutions logo">
+      Universal Solutions
+    </a>
+
+    <nav>
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#why-us">Why Us</a>
+      <a href="../index.html#industries">Industries</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <a href="../contact.html" class="btn btn-outline">
+      Get a Quote
+    </a>
+
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Data & Reporting Support
+    </span>
+
+    <h1>
+      Organized data. Clear reporting. Better operational visibility.
+    </h1>
+
+    <p>
+      Universal Solutions provides dependable data and reporting support for businesses that need accurate information, organized records and recurring reporting without adding unnecessary internal workload.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="../contact.html" class="btn btn-primary">
+        Get a Quote
+      </a>
+
+      <a href="#services" class="btn btn-ghost">
+        Explore Support
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>
+        Practical data support for everyday operations.
+      </h2>
+
+      <p>
+        From spreadsheet management to recurring reports, we help keep business information organized and accessible.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="icon">⌁</div>
+        <h3>Data Entry</h3>
+        <p>
+          Accurate entry and organization of business information across spreadsheets, systems and recurring records.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">▣</div>
+        <h3>Reporting</h3>
+        <p>
+          Recurring operational reports, summaries and structured information prepared around your business requirements.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">◎</div>
+        <h3>Research Support</h3>
+        <p>
+          Organized online research, information gathering and preparation of business data for internal use.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">□</div>
+        <h3>Spreadsheet Management</h3>
+        <p>
+          Spreadsheet updates, organization, formatting, recurring maintenance and information tracking.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✓</div>
+        <h3>Data Quality Checks</h3>
+        <p>
+          Structured checks to identify missing, inconsistent or incorrectly entered information.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">+</div>
+        <h3>Recurring Data Work</h3>
+        <p>
+          Ongoing support for businesses with regular data preparation, reporting and information management requirements.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="dark">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>
+        Built around your reporting workflow.
+      </h2>
+
+      <p>
+        Support can be structured around daily, weekly or monthly reporting requirements and adapted to your existing systems.
+      </p>
+
+    </div>
+
+    <ul class="list">
+
+      <li>Daily and weekly data preparation</li>
+      <li>Recurring operational reports</li>
+      <li>Spreadsheet and database updates</li>
+      <li>Information research and organization</li>
+      <li>Data quality and consistency checks</li>
+      <li>Custom reporting workflows</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>
+        Need reliable data support?
+      </h2>
+
+      <p>
+        Tell us what information your team manages regularly and we can discuss a support workflow around it.
+      </p>
+
+      <a href="../contact.html" class="btn btn-primary">
+        Talk to Universal Solutions
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      © 2026 Universal Solutions. All rights reserved.
+    </p>
+
+    <p>
+      <a href="tel:+917041667295">+91 70416 67295</a>
+      &nbsp; · &nbsp;
+      <a href="mailto:universalsolutionsagent@gmail.com">
+        universalsolutionsagent@gmail.com
+      </a>
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
