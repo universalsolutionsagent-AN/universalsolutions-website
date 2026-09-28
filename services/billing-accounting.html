@@ -1,12 +1,785 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=../index.html">
-<link rel="canonical" href="https://universalsolutions.in/">
-<title>Universal Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Finance & Accounting Support | Universal Solutions</title>
+
+<meta
+  name="description"
+  content="Universal Solutions provides reliable finance and accounting support including invoicing, billing administration, reconciliation, reporting and recurring financial workflows."
+>
+
+<link rel="icon" href="../images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+:root {
+  --navy-deep:#14213D;
+  --navy-midnight:#0B1626;
+  --teal:#1CA9A0;
+  --cyan-bright:#3FD3C6;
+  --bg:#F7F9FB;
+  --ink:#4A5568;
+  --border:#E2E8F0;
+  --white:#fff;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--navy-deep);
+  line-height:1.65;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.container {
+  max-width:1140px;
+  margin:auto;
+  padding:0 24px;
+}
+
+/* HEADER */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(247,249,251,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(20,33,61,.06);
+}
+
+header .container {
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+.brand img {
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+nav {
+  display:flex;
+  gap:28px;
+}
+
+nav a {
+  font-size:.94rem;
+  font-weight:500;
+}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 27px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.9rem;
+}
+
+.btn-primary {
+  background:linear-gradient(120deg,var(--teal),var(--cyan-bright));
+  color:var(--navy-midnight);
+}
+
+.btn-outline {
+  border:1.5px solid var(--navy-deep);
+}
+
+.btn-dark {
+  border:1px solid rgba(255,255,255,.3);
+  color:#fff;
+}
+
+/* HERO */
+
+.hero {
+  padding:100px 0 90px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(63,211,198,.15),transparent 30%),
+    linear-gradient(135deg,var(--navy-midnight),var(--navy-deep));
+}
+
+.eyebrow {
+  display:inline-block;
+  margin-bottom:18px;
+  color:var(--cyan-bright);
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+
+.hero h1 {
+  max-width:850px;
+  margin-bottom:22px;
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.5rem,5vw,4.4rem);
+  line-height:1.08;
+}
+
+.hero p {
+  max-width:760px;
+  margin-bottom:30px;
+  color:rgba(255,255,255,.75);
+  font-size:1.05rem;
+}
+
+.hero-actions {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+/* SECTIONS */
+
+section {
+  padding:82px 0;
+}
+
+.section-heading {
+  max-width:760px;
+  margin-bottom:40px;
+}
+
+.section-heading h2 {
+  margin-bottom:13px;
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,4vw,2.8rem);
+  line-height:1.15;
+}
+
+.section-heading p {
+  color:var(--ink);
+}
+
+/* CARDS */
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card {
+  padding:30px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:#fff;
+}
+
+.card h3 {
+  margin-bottom:10px;
+  font-family:'Fraunces',serif;
+  font-size:1.35rem;
+}
+
+.card p {
+  color:var(--ink);
+  font-size:.9rem;
+}
+
+.icon {
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--navy-deep),var(--teal));
+  color:#fff;
+  font-weight:700;
+}
+
+/* DARK SECTION */
+
+.dark {
+  color:#fff;
+  background:var(--navy-midnight);
+}
+
+.dark .section-heading p,
+.dark .card p {
+  color:rgba(255,255,255,.68);
+}
+
+.dark .card {
+  border-color:rgba(255,255,255,.1);
+  background:rgba(255,255,255,.045);
+}
+
+/* CTA */
+
+.cta {
+  padding:60px 35px;
+  border-radius:20px;
+  text-align:center;
+  color:#fff;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(63,211,198,.15),transparent 30%),
+    linear-gradient(135deg,var(--navy-midnight),var(--navy-deep));
+}
+
+.cta h2 {
+  margin-bottom:12px;
+  font-family:'Fraunces',serif;
+  font-size:2.4rem;
+}
+
+.cta p {
+  max-width:650px;
+  margin:0 auto 25px;
+  color:rgba(255,255,255,.7);
+}
+
+/* FOOTER */
+
+footer {
+  padding:45px 0;
+  background:var(--navy-midnight);
+  color:rgba(255,255,255,.6);
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:35px;
+  padding-bottom:30px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.footer-brand {
+  margin-bottom:10px;
+  color:#fff;
+  font-family:'Fraunces',serif;
+  font-size:1.2rem;
+}
+
+.footer-column h4 {
+  margin-bottom:12px;
+  color:#fff;
+}
+
+.footer-column a {
+  display:block;
+  margin-bottom:8px;
+  font-size:.83rem;
+}
+
+.footer-column a:hover {
+  color:var(--cyan-bright);
+}
+
+.footer-bottom {
+  padding-top:22px;
+  font-size:.78rem;
+}
+
+/* FLOATING BUTTONS */
+
+.contact-floats {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:200;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float-btn {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 17px;
+  border-radius:999px;
+  color:#fff;
+  font-size:.82rem;
+  font-weight:700;
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.float-call {
+  background:var(--navy-deep);
+}
+
+.float-whatsapp {
+  background:#25D366;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px) {
+
+  nav {
+    display:none;
+  }
+
+  .grid {
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns:1fr;
+  }
+
+  .hero {
+    padding:75px 0;
+  }
+
+}
+
+@media(max-width:520px) {
+
+  .container {
+    padding:0 18px;
+  }
+
+  header .btn {
+    padding:10px 16px;
+    font-size:.8rem;
+  }
+
+  .hero h1 {
+    font-size:2.55rem;
+  }
+
+  section {
+    padding:65px 0;
+  }
+
+  .cta {
+    padding:42px 24px;
+  }
+
+  .cta h2 {
+    font-size:2rem;
+  }
+
+  .float-btn {
+    width:50px;
+    height:50px;
+    padding:0;
+    justify-content:center;
+  }
+
+  .float-btn span:last-child {
+    display:none;
+  }
+
+}
+
+</style>
+
 </head>
+
 <body>
-<p>This page has moved. <a href="../index.html">Click here</a> if you are not redirected.</p>
+
+<header>
+
+  <div class="container">
+
+    <a class="brand" href="../index.html">
+
+      <img
+        src="../images/logo.png"
+        alt="Universal Solutions logo"
+      >
+
+      <span>Universal Solutions</span>
+
+    </a>
+
+    <nav>
+
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#why-us">Why Us</a>
+      <a href="../index.html#industries">Industries</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+
+    </nav>
+
+    <a
+      href="../contact.html"
+      class="btn btn-outline"
+    >
+      Get a Quote
+    </a>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Finance & Accounting Support
+    </span>
+
+    <h1>
+      Reliable support for the financial work behind your business.
+    </h1>
+
+    <p>
+      Universal Solutions helps businesses manage recurring finance and accounting administration so internal teams can stay focused on decisions, customers and growth.
+    </p>
+
+    <div class="hero-actions">
+
+      <a
+        href="../contact.html"
+        class="btn btn-primary"
+      >
+        Get a Quote
+      </a>
+
+      <a
+        href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20finance%20and%20accounting%20support."
+        target="_blank"
+        rel="noopener"
+        class="btn btn-dark"
+      >
+        Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>
+        Finance support built around recurring workflows.
+      </h2>
+
+      <p>
+        We can assist with structured financial administration, reporting and routine accounting workflows that require consistency and attention to detail.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <div class="icon">₹</div>
+
+        <h3>Invoicing & Billing</h3>
+
+        <p>
+          Invoice preparation, billing administration, payment follow-ups and recurring billing workflows.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">✓</div>
+
+        <h3>Reconciliation Support</h3>
+
+        <p>
+          Organized transaction review and reconciliation support for recurring financial records.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">▣</div>
+
+        <h3>Financial Administration</h3>
+
+        <p>
+          Routine accounts administration, documentation, data preparation and financial workflow support.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">↗</div>
+
+        <h3>Reporting</h3>
+
+        <p>
+          Recurring reports, spreadsheet preparation and organized financial information for management review.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">◷</div>
+
+        <h3>Accounts Follow-Up</h3>
+
+        <p>
+          Support with outstanding invoices, account-related communication and recurring follow-up workflows.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">+</div>
+
+        <h3>Custom Workflows</h3>
+
+        <p>
+          Flexible support for finance processes specific to your systems, business model and operating requirements.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="dark">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>
+        Why businesses use finance support.
+      </h2>
+
+      <p>
+        Recurring financial administration can consume significant internal time. Structured support can help keep these workflows organized and consistent.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>Reduce Administrative Load</h3>
+
+        <p>
+          Move recurring financial tasks away from internal teams when additional operational capacity is needed.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Maintain Consistency</h3>
+
+        <p>
+          Establish repeatable processes for billing, reporting, documentation and other recurring workflows.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Scale With Your Business</h3>
+
+        <p>
+          Add support as transaction volume, customer activity or administrative workload increases.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>
+        Need additional finance & accounting support?
+      </h2>
+
+      <p>
+        Tell us about your current financial workflows and we can discuss a practical support structure around them.
+      </p>
+
+      <a
+        href="../contact.html"
+        class="btn btn-primary"
+      >
+        Talk to Universal Solutions
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-brand">
+          Universal Solutions
+        </div>
+
+        <p>
+          Professional business operations support for companies that need reliable people behind the scenes.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Services</h4>
+
+        <a href="../index.html#services">
+          All Services
+        </a>
+
+        <a href="customer-support.html">
+          Customer Support
+        </a>
+
+        <a href="billing-accounting.html">
+          Finance & Accounting
+        </a>
+
+        <a href="data-reporting.html">
+          Data & Reporting
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Contact</h4>
+
+        <a href="tel:+917041667295">
+          +91 70416 67295
+        </a>
+
+        <a
+          href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp
+        </a>
+
+        <a href="mailto:universalsolutionsagent@gmail.com">
+          Email Us
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Universal Solutions. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<div class="contact-floats">
+
+  <a
+    href="tel:+917041667295"
+    class="float-btn float-call"
+  >
+    <span>📞</span>
+    <span>Call us</span>
+  </a>
+
+  <a
+    href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+    target="_blank"
+    rel="noopener"
+    class="float-btn float-whatsapp"
+  >
+    <span>💬</span>
+    <span>Chat with us</span>
+  </a>
+
+</div>
+
 </body>
+
 </html>
