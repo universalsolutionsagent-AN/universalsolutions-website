@@ -2453,6 +2453,96 @@ window.addEventListener('scroll', function () {
 
 }
 
+
+
+/* =========================
+   20-SECOND WHATSAPP CHAT
+========================= */
+.whatsapp-chat-popup{
+  position:fixed;
+  right:24px;
+  bottom:88px;
+  width:min(360px,calc(100vw - 32px));
+  background:#fff;
+  border:1px solid rgba(20,33,61,.10);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 24px 65px rgba(7,17,31,.22);
+  z-index:1200;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(18px) scale(.97);
+  transition:opacity .35s ease,transform .35s ease,visibility .35s ease;
+}
+.whatsapp-chat-popup.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0) scale(1);
+}
+.whatsapp-chat-top{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+}
+.whatsapp-chat-icon{
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#159c78;
+  color:#fff;
+  font-weight:800;
+  font-size:.78rem;
+}
+.whatsapp-chat-copy{padding-right:24px}
+.whatsapp-chat-copy strong{
+  display:block;
+  color:#14213D;
+  font-size:1rem;
+  margin-bottom:4px;
+}
+.whatsapp-chat-copy span{
+  display:block;
+  color:#667487;
+  font-size:.82rem;
+  line-height:1.5;
+}
+.whatsapp-chat-close{
+  position:absolute;
+  right:12px;
+  top:10px;
+  width:28px;
+  height:28px;
+  border:0;
+  border-radius:50%;
+  background:#f1f4f6;
+  color:#526073;
+  cursor:pointer;
+  font-size:18px;
+  line-height:28px;
+}
+.whatsapp-chat-button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  margin-top:16px;
+  padding:12px 16px;
+  border-radius:999px;
+  background:#159c78;
+  color:#fff;
+  font-size:.84rem;
+  font-weight:700;
+  transition:.2s ease;
+}
+.whatsapp-chat-button:hover{transform:translateY(-1px);background:#128b6c}
+@media(max-width:560px){
+  .whatsapp-chat-popup{right:16px;bottom:82px}
+}
+
 </style>
 
 
@@ -2481,6 +2571,63 @@ window.addEventListener('scroll', function () {
 
 </script>
 
+
+
+
+<!-- 20-second WhatsApp chat invitation -->
+<div class="whatsapp-chat-popup" id="whatsappChatPopup" role="dialog" aria-label="Chat with Universal Solutions" aria-hidden="true">
+  <button class="whatsapp-chat-close" id="whatsappChatClose" aria-label="Close chat">×</button>
+  <div class="whatsapp-chat-top">
+    <div class="whatsapp-chat-icon">WA</div>
+    <div class="whatsapp-chat-copy">
+      <strong>Need help with your operation?</strong>
+      <span>We're here if you'd like to talk about how Universal Solutions can support your business.</span>
+    </div>
+  </div>
+  <a class="whatsapp-chat-button" id="whatsappChatButton" href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services." target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+</div>
+
+
+
+<script>
+/* =========================
+   WHATSAPP CHAT AFTER 20 SECONDS
+========================= */
+(function () {
+  const popup = document.getElementById('whatsappChatPopup');
+  const closeButton = document.getElementById('whatsappChatClose');
+  const chatButton = document.getElementById('whatsappChatButton');
+
+  if (!popup) return;
+
+  const storageKey = 'us_whatsapp_chat_shown';
+  let timer;
+
+  function showChat() {
+    popup.classList.add('show');
+    popup.setAttribute('aria-hidden', 'false');
+    try { sessionStorage.setItem(storageKey, '1'); } catch (e) {}
+  }
+
+  function hideChat() {
+    popup.classList.remove('show');
+    popup.setAttribute('aria-hidden', 'true');
+  }
+
+  let alreadyShown = false;
+  try { alreadyShown = sessionStorage.getItem(storageKey) === '1'; } catch (e) {}
+
+  if (!alreadyShown) {
+    timer = setTimeout(showChat, 20000);
+  }
+
+  closeButton.addEventListener('click', hideChat);
+
+  chatButton.addEventListener('click', function () {
+    hideChat();
+  });
+})();
+</script>
 
 </body>
 
