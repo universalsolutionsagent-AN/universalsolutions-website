@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Ground Transportation Support | Universal Solutions</title>
+<meta name="description" content="Universal Solutions provides experienced operational support for luxury ground transportation companies across reservations, dispatch, flight tracking, customer experience, accounting, quality and 24/7 operations.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#14213d;
+  --deep:#07111f;
+  --deep2:#0b1626;
+  --teal:#1ca9a0;
+  --cyan:#3fd3c6;
+  --white:#fff;
+  --muted:#9eacbd;
+  --line:rgba(255,255,255,.10);
+  --light:#f7f9fb;
+  --ink:#465466;
+  --shadow:0 24px 70px rgba(7,17,31,.20);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;color:var(--ink);background:var(--light);line-height:1.65;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+h1,h2,h3,h4{font-family:Fraunces,serif;color:var(--navy);line-height:1.12}
+button{font:inherit}
+header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(20,33,61,.08);
+}
+header .container{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;color:var(--navy)}
+.brand img{width:38px;height:38px;object-fit:contain}
+nav{display:flex;align-items:center;gap:26px;font-size:.88rem;font-weight:600}
+nav a{color:#526073}
+nav a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 21px;font-size:.86rem;font-weight:700;transition:.25s ease}
+.btn-outline{border:1px solid rgba(20,33,61,.25);color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 12px 30px rgba(28,169,160,.24)}
+.btn-primary:hover{transform:translateY(-2px);background:#16958d}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+
+.hero{
+  min-height:calc(100vh - 76px);position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 70% 35%,rgba(63,211,198,.18),transparent 28%),
+    radial-gradient(circle at 15% 80%,rgba(28,169,160,.13),transparent 30%),
+    linear-gradient(135deg,#07111f,#0b1626 58%,#10233b);
+  color:#fff;display:flex;align-items:center;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;opacity:.28;
+  background-image:
+    linear-gradient(rgba(63,211,198,.10) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(63,211,198,.10) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:linear-gradient(to bottom,black,transparent 85%);
+  animation:gridMove 16s linear infinite;
+}
+@keyframes gridMove{to{background-position:58px 58px}}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
+.orb.one{width:420px;height:420px;right:-100px;top:8%;background:radial-gradient(circle,rgba(63,211,198,.20),transparent 68%);animation:float 8s ease-in-out infinite}
+.orb.two{width:300px;height:300px;left:-130px;bottom:-100px;background:radial-gradient(circle,rgba(28,169,160,.18),transparent 70%);animation:float 10s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translateY(-22px) translateX(12px)}}
+
+.hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;padding:75px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.eyebrow:before{content:"";width:30px;height:1px;background:var(--cyan)}
+.hero h1{color:#fff;font-size:clamp(3rem,6vw,5.4rem);max-width:700px;letter-spacing:-.035em}
+.hero h1 span{color:var(--cyan)}
+.hero p{max-width:610px;color:#b9c5d4;font-size:1.06rem;margin:24px 0 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{margin-top:22px;color:#8fa1b6;font-size:.78rem}
+.hero-note strong{color:#fff}
+
+.system{
+  position:relative;min-height:510px;display:flex;align-items:center;justify-content:center;
+}
+.system-core{
+  width:190px;height:190px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(circle at 35% 25%,#1d3b55,#0c1929 65%);
+  border:1px solid rgba(63,211,198,.42);
+  box-shadow:0 0 0 18px rgba(63,211,198,.025),0 0 70px rgba(63,211,198,.20),inset 0 0 35px rgba(63,211,198,.10);
+  position:relative;z-index:3;animation:corePulse 4s ease-in-out infinite;
+}
+@keyframes corePulse{50%{box-shadow:0 0 0 30px rgba(63,211,198,.018),0 0 95px rgba(63,211,198,.27),inset 0 0 45px rgba(63,211,198,.14)}}
+.core-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan);margin-bottom:12px}
+.system-core small{font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;color:#8fa1b6}
+.system-core strong{font-size:1.15rem;margin-top:5px;color:#fff}
+.ring{position:absolute;border:1px solid rgba(63,211,198,.16);border-radius:50%;width:330px;height:330px;animation:spin 24s linear infinite}
+.ring.two{width:470px;height:470px;animation-duration:34s;animation-direction:reverse;border-color:rgba(63,211,198,.08)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.node{
+  position:absolute;z-index:4;width:118px;min-height:64px;padding:12px 9px;text-align:center;
+  border:1px solid rgba(255,255,255,.12);background:rgba(10,25,40,.78);backdrop-filter:blur(12px);
+  border-radius:13px;color:#d9e2ec;box-shadow:0 12px 30px rgba(0,0,0,.18);
+  animation:nodeFloat 5s ease-in-out infinite;
+}
+.node b{display:block;color:#fff;font-size:.78rem}
+.node small{display:block;color:#7f94aa;font-size:.62rem;margin-top:2px}
+.node:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);top:9px;right:9px}
+@keyframes nodeFloat{50%{transform:translateY(-8px)}}
+.n1{top:4%;left:4%;animation-delay:.2s}.n2{top:21%;right:0;animation-delay:.8s}
+.n3{bottom:20%;right:2%;animation-delay:1.3s}.n4{bottom:3%;left:8%;animation-delay:1.8s}
+.n5{top:53%;left:0;animation-delay:2.2s}.n6{top:3%;right:25%;animation-delay:2.8s}
+.connection{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(63,211,198,.38),transparent);transform-origin:left center;opacity:.55}
+.c1{width:220px;top:29%;left:25%;transform:rotate(18deg)}.c2{width:220px;top:32%;right:23%;transform:rotate(-28deg)}
+.c3{width:210px;bottom:30%;right:24%;transform:rotate(25deg)}.c4{width:230px;bottom:25%;left:23%;transform:rotate(-22deg)}
+
+.section{padding:105px 0}
+.section.dark{background:var(--deep);color:#fff}
+.section-heading{max-width:760px;margin-bottom:48px}
+.section-heading.center{text-align:center;margin-left:auto;margin-right:auto}
+.section-heading .eyebrow{color:var(--teal)}
+.section-heading .eyebrow:before{background:var(--teal)}
+.section-heading h2{font-size:clamp(2.1rem,4vw,3.4rem);margin-bottom:15px}
+.section.dark h2{color:#fff}
+.section-heading p{color:#667487}
+.section.dark .section-heading p{color:#9eacbd}
+
+.path-wrap{position:relative}
+.path-line{position:absolute;left:31px;top:0;bottom:0;width:2px;background:linear-gradient(var(--teal),rgba(63,211,198,.05))}
+.path-step{position:relative;display:grid;grid-template-columns:64px 1fr;gap:28px;padding:0 0 58px}
+.path-number{
+  width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#fff;border:1px solid rgba(28,169,160,.25);color:var(--teal);font-size:.78rem;font-weight:800;position:relative;z-index:2;
+  box-shadow:0 12px 30px rgba(20,33,61,.08);
+}
+.path-card{
+  background:#fff;border:1px solid rgba(20,33,61,.08);border-radius:20px;padding:28px 30px;
+  transition:.3s ease;box-shadow:0 14px 35px rgba(20,33,61,.04);
+}
+.path-card:hover{transform:translateX(7px);border-color:rgba(28,169,160,.35);box-shadow:var(--shadow)}
+.path-card .mini{color:var(--teal);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.path-card h3{font-size:1.55rem;margin:5px 0 9px}
+.path-card p{max-width:760px}
+.path-flow{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.path-flow span{font-size:.72rem;font-weight:700;color:#536173;background:#f1f5f7;padding:7px 10px;border-radius:999px}
+.path-step:last-child{padding-bottom:0}
+
+.tech-stage{background:linear-gradient(135deg,#081321,#0d1e32);overflow:hidden;position:relative}
+.tech-stage:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(63,211,198,.13),transparent 34%)}
+.tech-console{position:relative;z-index:2;border:1px solid rgba(255,255,255,.10);border-radius:24px;background:rgba(255,255,255,.035);backdrop-filter:blur(14px);padding:20px;box-shadow:0 35px 100px rgba(0,0,0,.24)}
+.console-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 4px 16px;margin-bottom:20px}
+.console-title{font-size:.74rem;color:#aebdcc;letter-spacing:.08em;text-transform:uppercase}
+.live{display:flex;align-items:center;gap:7px;font-size:.68rem;color:#75e1d8;font-weight:700}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.35}}
+.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tech-card{padding:21px 17px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:15px;min-height:130px;transition:.25s}
+.tech-card:hover{transform:translateY(-5px);border-color:rgba(63,211,198,.34);background:rgba(63,211,198,.05)}
+.tech-card .num{font-size:.64rem;color:var(--cyan);font-weight:800}
+.tech-card h4{color:#fff;font-size:1rem;margin:9px 0 7px}
+.tech-card p{font-size:.72rem;color:#91a2b5;line-height:1.55}
+.tech-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.tech-tags span{border:1px solid rgba(63,211,198,.20);background:rgba(63,211,198,.05);color:#b9e9e5;border-radius:999px;padding:8px 12px;font-size:.7rem;font-weight:700}
+
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.team-card{padding:30px;border-radius:20px;background:#fff;border:1px solid rgba(20,33,61,.08);transition:.25s}
+.team-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.team-icon{width:44px;height:44px;border-radius:12px;background:#e8f7f5;color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:20px}
+.team-card h3{font-size:1.35rem;margin-bottom:9px}
+.team-card p{font-size:.9rem}
+
+.cta{background:linear-gradient(135deg,var(--navy),#0b3040);color:#fff;text-align:center;padding:95px 0;position:relative;overflow:hidden}
+.cta:before{content:"";position:absolute;width:450px;height:450px;border-radius:50%;right:-180px;top:-220px;background:radial-gradient(circle,rgba(63,211,198,.22),transparent 65%)}
+.cta .container{position:relative;z-index:2}
+.cta h2{color:#fff;font-size:clamp(2.2rem,4vw,3.6rem);margin-bottom:15px}
+.cta p{color:#b9c5d4;max-width:650px;margin:0 auto 28px}
+.cta-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+
+footer{background:#07111f;color:#8797aa;padding:55px 0 25px}
+.footer-main{display:flex;justify-content:space-between;gap:40px;padding-bottom:35px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand{color:#fff;font-weight:700;font-size:1.05rem}
+.footer-main p{font-size:.8rem;max-width:430px;margin-top:9px}
+.footer-links{display:flex;gap:22px;font-size:.8rem}
+.footer-links a:hover{color:#fff}
+.footer-bottom{padding-top:22px;font-size:.72rem;display:flex;justify-content:space-between;gap:20px}
+.float-contact{position:fixed;right:18px;bottom:18px;z-index:999;display:flex;flex-direction:column;gap:9px}
+.float-contact a{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.float-call{background:var(--navy)}.float-wa{background:#159c78}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+  nav{display:none}
+  .hero .container{grid-template-columns:1fr}
+  .hero{min-height:auto}
+  .hero .container{padding:70px 0 45px}
+  .system{min-height:470px}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 28px,1160px)}
+  header .container{min-height:68px}
+  .brand span{display:none}
+  header .btn{padding:10px 15px}
+  .hero h1{font-size:2.75rem}
+  .hero p{font-size:.95rem}
+  .system{transform:scale(.84);margin:-35px -25px}
+  .section{padding:75px 0}
+  .path-step{grid-template-columns:48px 1fr;gap:16px}
+  .path-number{width:48px;height:48px;font-size:.7rem}
+  .path-line{left:23px}
+  .path-card{padding:22px 19px}
+  .tech-grid{grid-template-columns:1fr}
+  .tech-console{padding:14px}
+  .footer-main,.footer-bottom{flex-direction:column}
+  .footer-links{flex-wrap:wrap}
+  .n1{left:0}.n2{right:0}.n3{right:0}.n4{left:0}.n5{left:-2px}.n6{right:16%}
+}
+</style>
+</head>
+
+<body>
+
+<header id="siteHeader">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Universal Solutions logo">
+      <span>Universal Solutions</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why-us">Why Us</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Luxury Ground Transportation</div>
+      <h1>Your operation.<br><span>Connected.</span></h1>
+      <p>Behind every smooth chauffeur experience is a network of reservations, dispatch, flight tracking, customer communication, billing and quality. Universal Solutions provides the trained people who keep that network moving.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#operation">Explore the operation ↓</a>
+        <a class="btn btn-outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)" href="contact.html">Build your support team</a>
+      </div>
+      <div class="hero-note"><strong>Technology-aware support</strong> · trained around your systems, workflows and SOPs.</div>
+    </div>
+
+    <div class="system reveal" aria-label="Connected transportation operations visualization">
+      <div class="ring"></div>
+      <div class="ring two"></div>
+      <div class="connection c1"></div><div class="connection c2"></div><div class="connection c3"></div><div class="connection c4"></div>
+      <div class="node n1"><b>Reservations</b><small>BOOKING FLOW</small></div>
+      <div class="node n2"><b>Dispatch</b><small>LIVE CONTROL</small></div>
+      <div class="node n3"><b>Flight Tracking</b><small>ARRIVAL DATA</small></div>
+      <div class="node n4"><b>Accounting</b><small>BILLING FLOW</small></div>
+      <div class="node n5"><b>Customer</b><small>EXPERIENCE</small></div>
+      <div class="node n6"><b>Quality</b><small>CONTROL LAYER</small></div>
+      <div class="system-core">
+        <div class="core-dot"></div>
+        <small>Universal Solutions</small>
+        <strong>Operations Hub</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="operation">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="eyebrow">See the workflow</div>
+      <h2>One trip. A connected path from booking to completion.</h2>
+      <p>Instead of adding another complicated layer, our team can plug into the operational path you already use.</p>
+    </div>
+
+    <div class="path-wrap">
+
+      <div class="path-step reveal">
+        <div class="path-number">01</div>
+        <div class="path-card">
+          <div class="mini">Reservation Desk</div>
+          <h3>The trip enters the system.</h3>
+          <p>Our trained team can manage incoming requests, booking details, changes, confirmations, passenger information and trip accuracy.</p>
+          <div class="path-flow"><span>Request</span><span>Verify</span><span>Book</span><span>Confirm</span></div>
+        </div>
+      </div>
+
+      <div class="path-step reveal">
+        <div class="path-number">02</div>
+        <div class="path-card">
+          <div class="mini">Dispatch Control</div>
+          <h3>The right chauffeur gets the right trip.</h3>
+          <p>Support can coordinate assignments, monitor trip status, communicate changes and keep dispatch information current.</p>
+          <div class="path-flow"><span>Assign</span><span>Coordinate</span><span>Monitor</span><span>Update</span></div>
+        </div>
+      </div>
+
+      <div class="path-step reveal">
+        <div class="path-number">03</div>
+        <div class="path-card">
+          <div class="mini">Flight & Trip Monitoring</div>
+          <h3>The operation reacts to the journey.</h3>
+          <p>Flight and trip information can be monitored so the team can support arrival updates, schedule changes and operational exceptions.</p>
+          <div class="path-flow"><span>Track</span><span>Monitor</span><span>Adjust</span><span>Communicate</span></div>
+        </div>
+      </div>
+
+      <div class="path-step reveal">
+        <div class="path-number">04</div>
+        <div class="path-card">
+          <div class="mini">Customer Experience</div>
+          <h3>The passenger stays informed.</h3>
+          <p>From confirmations and updates to service coordination, your customer communication can remain consistent while your internal team stays focused.</p>
+          <div class="path-flow"><span>Confirm</span><span>Update</span><span>Assist</span><span>Follow up</span></div>
+        </div>
+      </div>
+
+      <div class="path-step reveal">
+        <div class="path-number">05</div>
+        <div class="path-card">
+          <div class="mini">Billing & Accounting</div>
+          <h3>The trip closes cleanly.</h3>
+          <p>Operational support can continue after the ride with billing workflows, invoice preparation, reconciliation support and recurring reporting.</p>
+          <div class="path-flow"><span>Review</span><span>Bill</span><span>Reconcile</span><span>Report</span></div>
+        </div>
+      </div>
+
+      <div class="path-step reveal">
+        <div class="path-number">06</div>
+        <div class="path-card">
+          <div class="mini">Quality Assurance</div>
+          <h3>The operation learns from every trip.</h3>
+          <p>Quality checks, SOP reviews, scorecards and recurring issue tracking create visibility into where the operation can improve.</p>
+          <div class="path-flow"><span>Audit</span><span>Measure</span><span>Identify</span><span>Improve</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section tech-stage">
+  <div class="container">
+    <div class="section-heading center reveal">
+      <div class="eyebrow">Technology layer</div>
+      <h2 style="color:#fff">Your systems. Your workflows. Our trained team.</h2>
+      <p>We train our people around the tools and processes your operation uses rather than asking you to rebuild the way you work.</p>
+    </div>
+
+    <div class="tech-console reveal">
+      <div class="console-top">
+        <div class="console-title">Transportation Operations · Connected Workspace</div>
+        <div class="live"><i></i> SUPPORT READY</div>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card"><div class="num">01</div><h4>Reservations</h4><p>Reservation management systems and booking workflows.</p></div>
+        <div class="tech-card"><div class="num">02</div><h4>Dispatch</h4><p>Dispatch platforms, chauffeur assignment and trip monitoring.</p></div>
+        <div class="tech-card"><div class="num">03</div><h4>Flight Tracking</h4><p>Flight monitoring and arrival-related operational workflows.</p></div>
+        <div class="tech-card"><div class="num">04</div><h4>Accounting</h4><p>Billing, invoice and reconciliation support workflows.</p></div>
+        <div class="tech-card"><div class="num">05</div><h4>Customer Communication</h4><p>Phone, email and messaging workflows around each trip.</p></div>
+        <div class="tech-card"><div class="num">06</div><h4>Quality</h4><p>Audits, SOP checks, scorecards and issue tracking.</p></div>
+        <div class="tech-card"><div class="num">07</div><h4>Reporting</h4><p>Recurring operational reports and performance visibility.</p></div>
+        <div class="tech-card"><div class="num">08</div><h4>24/7 Coverage</h4><p>Extended and overnight support for operational continuity.</p></div>
+      </div>
+
+      <div class="tech-tags">
+        <span>Limo Anywhere</span>
+        <span>SantaCruz</span>
+        <span>Reservation Platforms</span>
+        <span>Dispatch Platforms</span>
+        <span>Flight Tracking</span>
+        <span>Billing Systems</span>
+        <span>QA & Reporting Tools</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="eyebrow">The people behind the system</div>
+      <h2>Specialized support, not generic staffing.</h2>
+      <p>Your operation can use one function, several functions, or a coordinated support structure built around your actual workload.</p>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card reveal">
+        <div class="team-icon">R</div>
+        <h3>Reservations Team</h3>
+        <p>Handles booking workflows, modifications, confirmations, passenger details and reservation accuracy.</p>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-icon">D</div>
+        <h3>Dispatch Support</h3>
+        <p>Supports trip assignment, chauffeur coordination, status monitoring and operational communication.</p>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-icon">Q</div>
+        <h3>Quality Analyst</h3>
+        <p>Reviews workflows, audits operational activity, tracks recurring issues and supports process improvement.</p>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-icon">A</div>
+        <h3>Accounting Support</h3>
+        <p>Supports billing administration, invoice workflows, reconciliation preparation and recurring reports.</p>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-icon">C</div>
+        <h3>Customer Experience</h3>
+        <p>Supports confirmations, customer communication, service coordination and follow-up.</p>
+      </article>
+
+      <article class="team-card reveal">
+        <div class="team-icon">24</div>
+        <h3>After-Hours Operations</h3>
+        <p>Provides extended or overnight coverage so important operational tasks do not have to wait until morning.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Make your operation feel connected.</h2>
+    <p>Tell us which part of your transportation operation needs support. We can build the workflow around your systems, your SOPs and your way of working.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Talk to Universal Solutions</a>
+      <a href="tel:+917041667295" class="btn btn-outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)">Call +91 70416 67295</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <div class="footer-brand">Universal Solutions</div>
+        <p>The people behind your operations — providing practical business operations support across customer experience, finance, data, administration and specialized workflows.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Universal Solutions. All rights reserved.</span>
+      <span>Business Operations Support</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-contact">
+  <a class="float-call" href="tel:+917041667295" aria-label="Call Universal Solutions">☎</a>
+  <a class="float-wa" href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with Universal Solutions on WhatsApp">WA</a>
+</div>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+reveals.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
