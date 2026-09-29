@@ -1,534 +1,1050 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality &amp; Process Support Services | Universal Solutions</title>
+  <meta name="description" content="Quality and process support for workflow checks, documentation, quality reviews, reporting, process consistency, and operational improvement.">
+  <link rel="canonical" href="https://universalsolutions.in/services/quality-process.html">
 
-<title>Quality & Process Support | Universal Solutions</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quality &amp; Process Support Services | Universal Solutions">
+  <meta property="og:description" content="Structured quality and process support for workflow consistency, documentation, reviews, reporting, and operational improvement.">
+  <meta property="og:url" content="https://universalsolutions.in/services/quality-process.html">
+  <meta property="og:image" content="https://universalsolutions.in/images/logo.png">
 
-<meta
-  name="description"
-  content="Quality and process support for workflow monitoring, documentation, quality checks and operational consistency from Universal Solutions."
->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quality &amp; Process Support Services | Universal Solutions">
+  <meta name="twitter:description" content="Structured quality and process support for workflow consistency, documentation, reviews, reporting, and operational improvement.">
+  <meta name="twitter:image" content="https://universalsolutions.in/images/logo.png">
 
-<link rel="icon" href="../images/logo.png">
+  <link rel="icon" href="../images/logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
->
+  <style>
+    :root{
+      --navy:#14213D;
+      --midnight:#0B1626;
+      --teal:#1CA9A0;
+      --cyan:#3FD3C6;
+      --bg:#F7F9FB;
+      --white:#fff;
+      --ink:#4A5568;
+      --muted:#667487;
+      --line:rgba(20,33,61,.10);
+      --shadow:0 22px 60px rgba(7,17,31,.10);
+      --radius:24px;
+    }
 
-<style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
 
-:root {
-  --navy:#14213D;
-  --midnight:#0B1626;
-  --teal:#1CA9A0;
-  --cyan:#3FD3C6;
-  --bg:#F7F9FB;
-  --ink:#4A5568;
-  --border:#E2E8F0;
-}
+    .container{
+      width:min(1160px,calc(100% - 40px));
+      margin:0 auto;
+    }
 
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(247,249,251,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(20,33,61,.07);
+    }
 
-html {
-  scroll-behavior:smooth;
-}
+    header .container{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
 
-body {
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--navy);
-  line-height:1.7;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      color:var(--navy);
+      font-weight:700;
+      letter-spacing:-.02em;
+      white-space:nowrap;
+    }
+    .brand img{
+      width:38px;
+      height:38px;
+      object-fit:contain;
+    }
 
-a {
-  text-decoration:none;
-  color:inherit;
-}
+    nav{
+      display:flex;
+      align-items:center;
+      gap:25px;
+    }
+    nav a{
+      color:#526073;
+      font-size:.88rem;
+      font-weight:600;
+      transition:.2s ease;
+    }
+    nav a:hover{color:var(--teal)}
 
-.container {
-  max-width:1140px;
-  margin:auto;
-  padding:0 24px;
-}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 22px;
+      border-radius:999px;
+      font-size:.86rem;
+      font-weight:700;
+      transition:.22s ease;
+      cursor:pointer;
+    }
+    .btn-outline{
+      border:1px solid var(--navy);
+      color:var(--navy);
+      background:transparent;
+    }
+    .btn-outline:hover{
+      background:var(--navy);
+      color:#fff;
+      transform:translateY(-1px);
+    }
+    .btn-primary{
+      background:var(--navy);
+      color:#fff;
+      box-shadow:0 12px 28px rgba(20,33,61,.16);
+    }
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 32px rgba(20,33,61,.22);
+    }
+    .btn-teal{
+      background:var(--teal);
+      color:#fff;
+      box-shadow:0 12px 28px rgba(28,169,160,.18);
+    }
+    .btn-teal:hover{
+      transform:translateY(-2px);
+      background:#178f87;
+    }
 
-header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(247,249,251,.95);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(20,33,61,.07);
-}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:112px 0 100px;
+      background:
+        radial-gradient(circle at 80% 16%,rgba(63,211,198,.16),transparent 30%),
+        linear-gradient(135deg,#f7f9fb 0%,#eef6f6 100%);
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:540px;
+      height:540px;
+      border-radius:50%;
+      border:1px solid rgba(28,169,160,.12);
+      right:-250px;
+      top:-235px;
+    }
 
-header .container {
-  min-height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
+    .hero-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:70px;
+      align-items:center;
+    }
 
-.brand {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-family:'Fraunces',serif;
-  font-weight:600;
-}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      margin-bottom:20px;
+      color:var(--teal);
+      font-size:.75rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .eyebrow:before{
+      content:"";
+      width:30px;
+      height:1px;
+      background:var(--teal);
+    }
 
-.brand img {
-  width:40px;
-  height:40px;
-  border-radius:50%;
-}
+    h1,h2,h3{
+      font-family:Fraunces,Georgia,serif;
+      color:var(--navy);
+      line-height:1.12;
+      margin:0;
+      letter-spacing:-.035em;
+    }
+    h1{
+      max-width:760px;
+      font-size:clamp(3rem,6vw,5.2rem);
+      font-weight:600;
+    }
 
-nav {
-  display:flex;
-  gap:26px;
-}
+    .hero-copy{
+      max-width:700px;
+      margin:26px 0 0;
+      font-size:1.08rem;
+      color:#5d697b;
+    }
 
-nav a {
-  font-size:.92rem;
-}
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:34px;
+    }
 
-.btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 27px;
-  border-radius:999px;
-  font-weight:600;
-}
+    .hero-note{
+      margin-top:24px;
+      font-size:.82rem;
+      color:#738094;
+    }
+    .hero-note strong{color:var(--navy)}
 
-.btn-primary {
-  background:linear-gradient(120deg,var(--teal),var(--cyan));
-  color:var(--midnight);
-}
+    .quality-card{
+      padding:30px;
+      border:1px solid rgba(20,33,61,.09);
+      border-radius:30px;
+      background:rgba(255,255,255,.80);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
+    }
 
-.btn-outline {
-  border:1px solid var(--navy);
-}
+    .card-label{
+      color:var(--teal);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
 
-.btn-ghost {
-  color:#fff;
-  border:1px solid rgba(255,255,255,.35);
-}
+    .quality-card h2{
+      font-size:2rem;
+      margin-top:12px;
+    }
 
-.hero {
-  padding:105px 0 90px;
-  color:#fff;
-  background:
-    radial-gradient(circle at 80% 20%,rgba(63,211,198,.14),transparent 30%),
-    linear-gradient(135deg,var(--midnight),var(--navy));
-}
+    .quality-card > p{
+      margin:15px 0 24px;
+      font-size:.92rem;
+    }
 
-.eyebrow {
-  color:var(--cyan);
-  font-size:.75rem;
-  font-weight:700;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
+    .quality-list{
+      display:grid;
+      gap:11px;
+    }
 
-.hero h1 {
-  max-width:820px;
-  margin:18px 0 22px;
-  font-family:'Fraunces',serif;
-  font-size:clamp(2.7rem,6vw,4.5rem);
-  line-height:1.05;
-}
+    .quality-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:13px 14px;
+      border-radius:15px;
+      background:#f6f9fa;
+      border:1px solid rgba(20,33,61,.06);
+    }
 
-.hero p {
-  max-width:720px;
-  color:rgba(255,255,255,.76);
-}
+    .quality-dot{
+      flex:0 0 9px;
+      width:9px;
+      height:9px;
+      margin-top:7px;
+      border-radius:50%;
+      background:var(--teal);
+    }
 
-.hero-actions {
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
+    .quality-item strong{
+      display:block;
+      color:var(--navy);
+      font-size:.88rem;
+    }
 
-section {
-  padding:85px 0;
-}
+    .quality-item span{
+      display:block;
+      margin-top:2px;
+      color:#718093;
+      font-size:.76rem;
+      line-height:1.5;
+    }
 
-.section-heading {
-  max-width:760px;
-  margin-bottom:40px;
-}
+    section{padding:96px 0}
 
-.section-heading h2 {
-  margin-bottom:14px;
-  font-family:'Fraunces',serif;
-  font-size:clamp(2rem,4vw,2.8rem);
-  line-height:1.15;
-}
+    .section-head{
+      max-width:760px;
+      margin-bottom:48px;
+    }
 
-.section-heading p {
-  color:var(--ink);
-}
+    .section-head h2{
+      font-size:clamp(2.25rem,4vw,3.5rem);
+    }
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
+    .section-head p{
+      margin:17px 0 0;
+      font-size:1rem;
+      color:#657286;
+    }
 
-.card {
-  padding:30px 25px;
-  border:1px solid var(--border);
-  border-radius:16px;
-  background:#fff;
-}
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+    }
 
-.card h3 {
-  margin-bottom:10px;
-  font-family:'Fraunces',serif;
-  font-size:1.3rem;
-}
+    .info-card{
+      padding:34px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:0 15px 45px rgba(7,17,31,.06);
+    }
 
-.card p {
-  color:var(--ink);
-  font-size:.9rem;
-}
+    .info-card h3{
+      font-size:1.55rem;
+      margin-bottom:12px;
+    }
 
-.icon {
-  width:45px;
-  height:45px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:18px;
-  border-radius:12px;
-  color:#fff;
-  background:linear-gradient(135deg,var(--navy),var(--teal));
-}
+    .info-card p{
+      margin:0;
+      font-size:.93rem;
+    }
 
-.dark {
-  background:var(--midnight);
-  color:#fff;
-}
+    .services-section{background:#fff}
 
-.dark .section-heading p {
-  color:rgba(255,255,255,.7);
-}
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
 
-.list {
-  display:grid;
-  gap:14px;
-  list-style:none;
-}
+    .feature{
+      padding:29px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#fff;
+      transition:.25s ease;
+    }
 
-.list li {
-  padding:15px 18px;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:10px;
-  background:rgba(255,255,255,.04);
-  color:rgba(255,255,255,.82);
-}
+    .feature:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 45px rgba(7,17,31,.08);
+      border-color:rgba(28,169,160,.25);
+    }
 
-.list li::before {
-  content:"✓";
-  margin-right:10px;
-  color:var(--cyan);
-}
+    .feature-number{
+      color:var(--teal);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.12em;
+    }
 
-.cta {
-  padding:60px 35px;
-  border-radius:20px;
-  text-align:center;
-  color:#fff;
-  background:linear-gradient(135deg,var(--midnight),var(--navy));
-}
+    .feature h3{
+      margin:13px 0 9px;
+      font-size:1.35rem;
+    }
 
-.cta h2 {
-  margin-bottom:12px;
-  font-family:'Fraunces',serif;
-  font-size:2.4rem;
-}
+    .feature p{
+      margin:0;
+      font-size:.84rem;
+      color:#687588;
+    }
 
-.cta p {
-  max-width:650px;
-  margin:0 auto 25px;
-  color:rgba(255,255,255,.72);
-}
+    .workflow{
+      background:
+        radial-gradient(circle at 10% 20%,rgba(63,211,198,.09),transparent 28%),
+        var(--midnight);
+      color:#c6d0dd;
+    }
 
-footer {
-  padding:42px 0;
-  background:var(--midnight);
-  color:rgba(255,255,255,.6);
-  text-align:center;
-  font-size:.84rem;
-}
+    .workflow h2,.workflow h3{color:#fff}
+    .workflow .section-head p{color:#aab7c8}
 
-footer a {
-  color:var(--cyan);
-}
+    .workflow-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
 
-@media(max-width:850px) {
+    .step{
+      padding:27px 23px;
+      min-height:210px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:20px;
+      background:rgba(255,255,255,.035);
+    }
 
-  nav {
-    display:none;
+    .step-number{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      background:rgba(63,211,198,.12);
+      color:var(--cyan);
+      font-size:.75rem;
+      font-weight:800;
+    }
+
+    .step h3{
+      margin:21px 0 8px;
+      font-size:1.25rem;
+    }
+
+    .step p{
+      margin:0;
+      font-size:.81rem;
+      color:#aab7c8;
+      line-height:1.65;
+    }
+
+    .models-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .model{
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:#fff;
+    }
+
+    .model h3{
+      font-size:1.45rem;
+      margin-bottom:9px;
+    }
+
+    .model p{
+      margin:0;
+      font-size:.86rem;
+    }
+
+    .model .tag{
+      display:inline-block;
+      margin-bottom:17px;
+      padding:5px 10px;
+      border-radius:999px;
+      background:#edf8f7;
+      color:#168e87;
+      font-size:.68rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .faq-section{background:#fff}
+
+    .faq{max-width:880px}
+
+    details{
+      border-top:1px solid var(--line);
+      padding:21px 0;
+    }
+
+    details:last-child{border-bottom:1px solid var(--line)}
+
+    summary{
+      list-style:none;
+      cursor:pointer;
+      position:relative;
+      padding-right:35px;
+      color:var(--navy);
+      font-weight:700;
+      font-size:.94rem;
+    }
+
+    summary::-webkit-details-marker{display:none}
+
+    summary:after{
+      content:"+";
+      position:absolute;
+      right:0;
+      top:-5px;
+      color:var(--teal);
+      font-size:1.5rem;
+      font-weight:400;
+    }
+
+    details[open] summary:after{content:"−"}
+
+    details p{
+      max-width:800px;
+      margin:12px 0 0;
+      color:#697689;
+      font-size:.86rem;
+    }
+
+    .cta{
+      padding:78px 0;
+      background:linear-gradient(135deg,#edf8f7,#f7f9fb);
+    }
+
+    .cta-box{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      padding:42px;
+      border-radius:28px;
+      background:var(--navy);
+      box-shadow:0 25px 65px rgba(7,17,31,.16);
+    }
+
+    .cta-box h2{
+      color:#fff;
+      font-size:clamp(2rem,4vw,3.2rem);
+    }
+
+    .cta-box p{
+      max-width:650px;
+      margin:12px 0 0;
+      color:#b9c5d4;
+      font-size:.92rem;
+    }
+
+    .cta-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      flex:0 0 auto;
+    }
+
+    .cta .btn-outline{
+      border-color:rgba(255,255,255,.35);
+      color:#fff;
+    }
+
+    .cta .btn-outline:hover{
+      background:#fff;
+      color:var(--navy);
+    }
+
+    footer{
+      background:#07111f;
+      color:#9eacbd;
+      padding:62px 0 30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr 1fr;
+      gap:35px;
+      padding-bottom:45px;
+    }
+
+    footer .brand{
+      color:#fff;
+      margin-bottom:14px;
+    }
+
+    .footer-brand p{
+      max-width:330px;
+      margin:0;
+      font-size:.82rem;
+      line-height:1.7;
+    }
+
+    footer h3{
+      color:#fff;
+      font-family:Inter,Arial,sans-serif;
+      font-size:.78rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin:0 0 16px;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:9px;
+    }
+
+    .footer-links a{
+      font-size:.79rem;
+      color:#9eacbd;
+      transition:.2s ease;
+    }
+
+    .footer-links a:hover{color:#fff}
+
+    .footer-bottom{
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,.09);
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      font-size:.72rem;
+      color:#78879a;
+    }
+
+    .floating-contact{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:900;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .floating-contact a{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-width:132px;
+      min-height:43px;
+      padding:0 16px;
+      border-radius:999px;
+      color:#fff;
+      font-size:.74rem;
+      font-weight:800;
+      box-shadow:0 12px 28px rgba(7,17,31,.18);
+      transition:.2s ease;
+    }
+
+    .floating-contact a:hover{transform:translateY(-2px)}
+    .call-button{background:var(--navy)}
+    .whatsapp-button{background:#159c78}
+
+    @media(max-width:980px){
+      nav{display:none}
+      .hero-grid{grid-template-columns:1fr;gap:45px}
+      .feature-grid{grid-template-columns:repeat(2,1fr)}
+      .workflow-grid{grid-template-columns:repeat(2,1fr)}
+      .models-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(max-width:760px){
+      .container{width:min(100% - 30px,1160px)}
+      .hero{padding:78px 0 70px}
+      section{padding:72px 0}
+      .intro-grid{grid-template-columns:1fr}
+      .feature-grid{grid-template-columns:1fr}
+      .workflow-grid{grid-template-columns:1fr 1fr}
+      .cta-box{
+        padding:32px;
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
+
+    @media(max-width:560px){
+      header .container{min-height:70px}
+      .brand span{display:none}
+      header .btn{
+        min-height:42px;
+        padding:0 17px;
+        font-size:.76rem;
+      }
+      h1{font-size:clamp(2.65rem,13vw,4rem)}
+      .hero-copy{font-size:.98rem}
+      .hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .hero-actions .btn{width:100%}
+      .quality-card{padding:23px}
+      .workflow-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+      .floating-contact{
+        right:14px;
+        bottom:14px;
+      }
+      .floating-contact a{min-width:118px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Quality & Process Support",
+    "provider":{
+      "@type":"Organization",
+      "name":"Universal Solutions",
+      "url":"https://universalsolutions.in/",
+      "telephone":"+91-7041667295"
+    },
+    "url":"https://universalsolutions.in/services/quality-process.html",
+    "description":"Quality and process support for workflow checks, documentation, quality reviews, reporting, process consistency, and operational improvement.",
+    "areaServed":["United States","Canada","United Kingdom"],
+    "serviceType":"Quality and Process Support"
   }
-
-  .grid {
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-
-@media(max-width:560px) {
-
-  .container {
-    padding:0 18px;
-  }
-
-  .grid {
-    grid-template-columns:1fr;
-  }
-
-  .hero {
-    padding:75px 0;
-  }
-
-  .hero h1 {
-    font-size:2.65rem;
-  }
-
-  .hero-actions {
-    flex-direction:column;
-  }
-
-  .hero-actions .btn {
-    width:100%;
-  }
-
-}
-
-</style>
-
+  </script>
 </head>
 
 <body>
-
-<header>
-
-  <div class="container">
-
-    <a href="../index.html" class="brand">
-      <img src="../images/logo.png" alt="Universal Solutions logo">
-      Universal Solutions
-    </a>
-
-    <nav>
-      <a href="../index.html#services">Services</a>
-      <a href="../index.html#why-us">Why Us</a>
-      <a href="../index.html#industries">Industries</a>
-      <a href="../about.html">About</a>
-      <a href="../blog.html">Blog</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-
-    <a href="../contact.html" class="btn btn-outline">
-      Get a Quote
-    </a>
-
-  </div>
-
-</header>
-
-<section class="hero">
-
-  <div class="container">
-
-    <span class="eyebrow">
-      Quality & Process Support
-    </span>
-
-    <h1>
-      Stronger processes. Consistent workflows. Better operational control.
-    </h1>
-
-    <p>
-      Universal Solutions helps businesses monitor recurring workflows, maintain process documentation and introduce structured quality checks into day-to-day operations.
-    </p>
-
-    <div class="hero-actions">
-
-      <a href="../contact.html" class="btn btn-primary">
-        Get a Quote
+  <header id="siteHeader">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="Universal Solutions logo">
+        <span>Universal Solutions</span>
       </a>
 
-      <a href="#services" class="btn btn-ghost">
-        Explore Support
-      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#why-us">Why Us</a>
+        <a href="../index.html#industries">Industries</a>
+        <a href="../about.html">About</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
 
+      <a href="../contact.html" class="btn btn-outline">Get a Quote</a>
     </div>
+  </header>
 
-  </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Quality &amp; Process Support</div>
+          <h1>Make the work more consistent, measurable, and easier to manage.</h1>
 
-</section>
+          <p class="hero-copy">
+            Universal Solutions provides practical quality and process support for businesses that need workflows reviewed, documented, monitored, and kept consistent as operations grow.
+          </p>
 
-<section id="services">
+          <div class="hero-actions">
+            <a href="../contact.html" class="btn btn-primary">Discuss Your Workflow</a>
+            <a href="../index.html#services" class="btn btn-outline">Explore Services</a>
+          </div>
 
-  <div class="container">
+          <p class="hero-note">
+            <strong>Structured support:</strong> build quality checks and process discipline around the way your business already works.
+          </p>
+        </div>
 
-    <div class="section-heading">
+        <div class="quality-card">
+          <div class="card-label">Quality in the workflow</div>
+          <h2>Turn process expectations into repeatable work.</h2>
 
-      <h2>
-        Operational quality support where it matters.
-      </h2>
+          <p>
+            Good processes become more useful when they are documented, followed, reviewed, and improved as the operation changes.
+          </p>
 
-      <p>
-        Structured processes help businesses reduce avoidable errors and maintain consistency as workloads grow.
-      </p>
+          <div class="quality-list">
+            <div class="quality-item">
+              <span class="quality-dot"></span>
+              <div>
+                <strong>Workflow checks</strong>
+                <span>Review agreed steps and outputs against defined requirements.</span>
+              </div>
+            </div>
 
+            <div class="quality-item">
+              <span class="quality-dot"></span>
+              <div>
+                <strong>Process documentation</strong>
+                <span>Keep procedures, instructions, and recurring workflows organized.</span>
+              </div>
+            </div>
+
+            <div class="quality-item">
+              <span class="quality-dot"></span>
+              <div>
+                <strong>Quality reporting</strong>
+                <span>Record findings, recurring issues, and relevant operational observations.</span>
+              </div>
+            </div>
+
+            <div class="quality-item">
+              <span class="quality-dot"></span>
+              <div>
+                <strong>Process support</strong>
+                <span>Help teams maintain consistent workflows as requirements evolve.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Why quality matters</div>
+          <h2>Consistency is built into the process, not added at the end.</h2>
+          <p>
+            Quality support can help businesses create clearer expectations around recurring work, identify gaps, and maintain better visibility into how processes are being followed.
+          </p>
+        </div>
+
+        <div class="intro-grid">
+          <div class="info-card">
+            <h3>Clear workflows reduce unnecessary variation.</h3>
+            <p>
+              When recurring work is documented and reviewed against defined expectations, teams have a clearer reference for how tasks should be completed and what a completed result should look like.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Useful reviews create operational visibility.</h3>
+            <p>
+              Structured checks can surface recurring issues, documentation gaps, or workflow inconsistencies so the business can decide what needs attention and where processes may be improved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we can support</div>
+          <h2>Practical quality and process work for recurring operations.</h2>
+          <p>
+            Support can be focused on one workflow or combined with other operational functions where quality and process consistency are important.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-number">01 / REVIEW</div>
+            <h3>Workflow Reviews</h3>
+            <p>Review agreed workflows and completed work against the process requirements established for your operation.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-number">02 / CHECKS</div>
+            <h3>Quality Checks</h3>
+            <p>Perform recurring checks on selected tasks, records, outputs, or customer-facing work using defined criteria.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-number">03 / DOCUMENTATION</div>
+            <h3>Process Documentation</h3>
+            <p>Organize procedures, instructions, checklists, workflow notes, and other documentation used by operational teams.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-number">04 / REPORTING</div>
+            <h3>Quality Reporting</h3>
+            <p>Compile findings, observations, recurring issues, and agreed quality information into useful reports.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-number">05 / CONSISTENCY</div>
+            <h3>Process Consistency</h3>
+            <p>Support repeatable execution by helping teams work from clear procedures and established operating standards.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-number">06 / IMPROVEMENT</div>
+            <h3>Process Support</h3>
+            <p>Help identify areas where workflows, documentation, or recurring tasks may be clarified or refined.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our approach</div>
+          <h2>A simple framework for keeping quality connected to the work.</h2>
+          <p>
+            We structure support around your existing processes so quality reviews remain practical and connected to day-to-day operations.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Understand</h3>
+            <p>Review the workflow, expected outputs, quality criteria, documentation, and priorities for the work.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Define</h3>
+            <p>Establish the checks, review points, documentation requirements, and reporting format to be used.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Review</h3>
+            <p>Perform agreed checks consistently and record relevant findings, exceptions, and recurring observations.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Improve</h3>
+            <p>Organize useful feedback so your team can decide where processes or documentation should be adjusted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Flexible support models</div>
+          <h2>Use quality support where it creates the most value.</h2>
+          <p>
+            Different businesses need different levels of process support. Start with a focused workflow and expand as your requirements become clearer.
+          </p>
+        </div>
+
+        <div class="models-grid">
+          <div class="model">
+            <span class="tag">Focused</span>
+            <h3>Single-workflow reviews</h3>
+            <p>Use structured checks for one important process, queue, workflow, or recurring operational task.</p>
+          </div>
+
+          <div class="model">
+            <span class="tag">Recurring</span>
+            <h3>Ongoing quality support</h3>
+            <p>Set up recurring reviews and reporting around the workflows where consistent oversight is important.</p>
+          </div>
+
+          <div class="model">
+            <span class="tag">Broader</span>
+            <h3>Process operations support</h3>
+            <p>Combine quality checks with documentation, reporting, administrative support, data work, or other operational functions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Questions</div>
+          <h2>Quality &amp; process support FAQs.</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>What does Quality &amp; Process support include?</summary>
+            <p>It can include workflow reviews, quality checks, process documentation, recurring quality reporting, consistency support, and practical process improvement support based on your defined requirements.</p>
+          </details>
+
+          <details>
+            <summary>Can you work with our existing procedures?</summary>
+            <p>Yes. Support can be structured around the procedures, checklists, quality criteria, documentation, and workflows already used by your business.</p>
+          </details>
+
+          <details>
+            <summary>What kinds of work can be reviewed?</summary>
+            <p>The scope depends on your operation. Examples can include customer-facing work, recurring administrative tasks, records, reports, workflow outputs, documentation, and other agreed operational activities.</p>
+          </details>
+
+          <details>
+            <summary>Can quality checks be performed on a recurring schedule?</summary>
+            <p>Yes. Reviews can be organized around an agreed frequency and scope so quality information becomes part of the recurring workflow.</p>
+          </details>
+
+          <details>
+            <summary>Can this service be combined with other support?</summary>
+            <p>Yes. Quality and process support can complement customer support, finance and accounting, data and reporting, administrative support, after-hours operations, project coordination, and specialized support.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Want more consistency across your operational workflows?</h2>
+            <p>
+              Tell us which processes need review, documentation, quality checks, or recurring reporting. We can discuss a support model around your current workflow.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="../contact.html" class="btn btn-teal">Get a Quote</a>
+            <a href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20quality%20and%20process%20support." target="_blank" rel="noopener" class="btn btn-outline">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html">
+            <img src="../images/logo.png" alt="Universal Solutions logo">
+            <span>Universal Solutions</span>
+          </a>
+          <p>Practical operational support for companies that need capable people behind the work that keeps business moving.</p>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <div class="footer-links">
+            <a href="index.html">All Services</a>
+            <a href="customer-support.html">Customer Support</a>
+            <a href="billing-accounting.html">Finance &amp; Accounting</a>
+            <a href="data-reporting.html">Data &amp; Reporting</a>
+            <a href="administrative-support.html">Administrative Support</a>
+            <a href="after-hours-operations.html">After-Hours Operations</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="quality-process.html">Quality &amp; Process</a>
+            <a href="project-coordination.html">Project Coordination</a>
+            <a href="specialized-support.html">Specialized Support</a>
+            <a href="../luxury-ground-transportation.html">Luxury Transportation</a>
+            <a href="../chauffeur-operations.html">Chauffeur Operations</a>
+            <a href="../case-studies.html">Case Studies</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <div class="footer-links">
+            <a href="../about.html">About</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+            <a href="tel:+917041667295">+91 70416 67295</a>
+            <a href="https://wa.me/917041667295" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:universalsolutionsagent@gmail.com">Email Us</a>
+            <a href="https://www.linkedin.com/in/universal-solutions-53662942/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Universal Solutions. All rights reserved.</span>
+        <span>Business Operations Support</span>
+      </div>
     </div>
+  </footer>
 
-    <div class="grid">
-
-      <article class="card">
-        <div class="icon">✓</div>
-        <h3>Quality Checks</h3>
-        <p>
-          Routine reviews designed to identify inconsistencies, missing information and workflow issues.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">□</div>
-        <h3>Process Documentation</h3>
-        <p>
-          Clear documentation of recurring workflows, responsibilities and operational procedures.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">◎</div>
-        <h3>Workflow Monitoring</h3>
-        <p>
-          Support for monitoring recurring activities and keeping operational tasks aligned with defined procedures.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">▣</div>
-        <h3>Checklist Management</h3>
-        <p>
-          Structured checklists and recurring controls for processes that require consistency.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">⌁</div>
-        <h3>Issue Tracking</h3>
-        <p>
-          Organized tracking of recurring issues, exceptions, follow-ups and process observations.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">+</div>
-        <h3>Process Support</h3>
-        <p>
-          Flexible assistance with maintaining and improving the operational workflows your business relies on.
-        </p>
-      </article>
-
-    </div>
-
+  <div class="floating-contact" aria-label="Contact Universal Solutions">
+    <a class="call-button" href="tel:+917041667295">Call Us</a>
+    <a class="whatsapp-button" href="https://wa.me/917041667295?text=Hello%20Universal%20Solutions%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services." target="_blank" rel="noopener">WhatsApp</a>
   </div>
-
-</section>
-
-<section class="dark">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>
-        Create more consistency across recurring work.
-      </h2>
-
-      <p>
-        Quality and process support can be integrated into existing operations without requiring a complete change to your systems.
-      </p>
-
-    </div>
-
-    <ul class="list">
-
-      <li>Recurring quality checks</li>
-      <li>Process and workflow documentation</li>
-      <li>Operational checklists</li>
-      <li>Exception and issue tracking</li>
-      <li>Process monitoring</li>
-      <li>Workflow consistency support</li>
-
-    </ul>
-
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="cta">
-
-      <h2>
-        Want more consistency in your workflows?
-      </h2>
-
-      <p>
-        Tell us which processes need additional structure, monitoring or quality support.
-      </p>
-
-      <a href="../contact.html" class="btn btn-primary">
-        Talk to Universal Solutions
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-
-  <div class="container">
-
-    <p>
-      © 2026 Universal Solutions. All rights reserved.
-    </p>
-
-    <p>
-      <a href="tel:+917041667295">+91 70416 67295</a>
-      &nbsp; · &nbsp;
-      <a href="mailto:universalsolutionsagent@gmail.com">
-        universalsolutionsagent@gmail.com
-      </a>
-    </p>
-
-  </div>
-
-</footer>
-
 </body>
 </html>
